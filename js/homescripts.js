@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       buttons.forEach((btn) => {
         const name = btn.dataset.tab;
         btn.classList.remove("active");
-        btn.src = "images/inactive-" + name + "-menu-button.png";
+        btn.src = "Images/inactive-" + name + "-menu-button.png";
       });
 
       // reset panels
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // activate selected
       this.classList.add("active");
-      this.src = "images/active-" + tabName + "-menu-button.png";
+      this.src = "Images/active-" + tabName + "-menu-button.png";
       document.getElementById(tabName).classList.add("active");
     });
   });
