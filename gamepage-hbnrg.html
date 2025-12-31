@@ -1,0 +1,2369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ASIANCONNECT</title>
+    <link rel="icon" href="images/weblogo.png" type="image/png" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/gamepage.css" />
+  </head>
+
+  <body>
+    <!-- Header Navbar -->
+    <div class="header">
+      <div class="header-inner">
+        <img class="contact" src="Images/contact.png" alt="contact" />
+        <div class="realtime">
+          <span id="date_time"></span>
+          <img src="Images/korea.png" class="korea-active" alt="korea" />
+        </div>
+      </div>
+    </div>
+    <!-- Primary Navbar -->
+    <div class="top-nav">
+      <div class="top-nav-inner">
+        <!-- LEFT -->
+        <div class="nav-left">
+          <div class="nav-logo">
+            <img
+              src="Images/headerlogo.png"
+              alt="Logo"
+              onclick="location.href='index.html'"
+            />
+          </div>
+          <nav class="nav-menu">
+            <a
+              href="deposit.html"
+              class="<?= ($page === 'deposit') ? 'active' : '' ?>"
+              >입금</a
+            >
+            <a
+              href="withdraw.html"
+              class="<?= ($page === 'withdraw') ? 'active' : '' ?>"
+              >출금</a
+            >
+            <a
+              href="transfer.html"
+              class="<?= ($page === 'transfer') ? 'active' : '' ?>"
+              >머니이동</a
+            >
+            <a
+              href="sports.html"
+              class="<?= ($page === 'sports') ? 'active' : '' ?>"
+              >스포츠</a
+            >
+            <a
+              href="casino.html"
+              class="<?= ($page === 'casino') ? 'active' : '' ?>"
+              >카지노</a
+            >
+            <a
+              href="slots.html"
+              class="<?= ($page === 'slots') ? 'active' : '' ?>"
+              >슬롯</a
+            >
+            <a
+              href="bonus.html"
+              class="<?= ($page === 'bonus') ? 'active' : '' ?>"
+              >보너스</a
+            >
+            <a
+              href="customer-service.html"
+              class="<?= ($page === 'customer-service') ? 'active' : '' ?>"
+              >고객센터</a
+            >
+            <a
+              href="streaming.html"
+              class="<?= ($page === 'streaming') ? 'active' : '' ?>"
+              >스트리밍</a
+            >
+          </nav>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="nav-right">
+          <div class="profile">
+            <img src="Images/profile.png" alt="Profile" />
+          </div>
+
+          <div class="auth-box">
+            <a href="#" class="login-link" id="openLogin">로그인 / 회원가입</a>
+            <a href="#" class="buddy-link">Buddy 보너스</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Primary Navbar -->
+
+    <!-- Game Page -->
+    <div class="gamepage-title-wrap">
+      <img src="images/game-title-hbnrg.png" alt="Game Menu Title" />
+    </div>
+
+    <!-- TAB CONTENT -->
+    <div class="fancy-box">
+      <div class="column-sltmpage">
+        <div class="sltm-games">
+          <div class="row-sltm">
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGGeniesShowtime.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGGeniesShowtime','17');"
+                  alt="Genie's Showtime"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Genie's Showtime</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGShiveringStrings.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGShiveringStrings','17');"
+                  alt="Shivering Strings"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Shivering Strings</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGIndianaWolf.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGIndianaWolf','17');"
+                  alt="Indiana Wolf"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Indiana Wolf</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGMysticShaman.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGMysticShaman','17');"
+                  alt="Mystic Shaman"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Mystic Shaman</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGSafariRumble.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGSafariRumble','17');"
+                  alt="Safari Rumble"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Safari Rumble</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGGladiatorRoyal.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGGladiatorRoyal','17');"
+                  alt="Gladiator Royal"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Gladiator Royal</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGMummyHunter.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGMummyHunter','17');"
+                  alt="Mummy Hunter"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Mummy Hunter</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGMysticRings.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGMysticRings','17');"
+                  alt="Mystic Rings"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Mystic Rings</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGDarumaImpact.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGDarumaImpact','17');"
+                  alt="Daruma Impact"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Daruma Impact</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGMXMania.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGMXMania','17');"
+                  alt="MX Mania"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">MX Mania</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGLoveAndRichesEldorado.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGLoveAndRichesEldorado','17');"
+                  alt="Love And Riches: Eldorado"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Love And Riches: Eldorado</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGSuperFruitBlast.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGSuperFruitBlast','17');"
+                  alt="Super Fruit Blast"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Super Fruit Blast</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGShamrockQuest.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGShamrockQuest','17');"
+                  alt="Shamrock Quest"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Shamrock Quest</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGJapaneseMask.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGJapaneseMask','17');"
+                  alt="Japanese Mask"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Japanese Mask</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGHyperHues.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGHyperHues','17');"
+                  alt="Hyper Hues"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Hyper Hues</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGCarnivalCove.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGCarnivalCove','17');"
+                  alt="Carnival Cove"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Carnival Cove</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGBabaYaga.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGBabaYaga','17');"
+                  alt="Baba Yaga"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Baba Yaga</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGPoseidon.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGPoseidon','17');"
+                  alt="Poseidon"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Poseidon</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGJump2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGJump2','17');"
+                  alt="Jump! 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Jump! 2</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGHauntedHarbor.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGHauntedHarbor','17');"
+                  alt="Haunted Harbor"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Haunted Harbor</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGGloryOfRome.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGGloryOfRome','17');"
+                  alt="Glory Of Rome"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Glory Of Rome</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGKoiKoiTreasure.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGKoiKoiTreasure','17');"
+                  alt="Koi Koi Treasure"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Koi Koi Treasure</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGWaltzBeauty.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGWaltzBeauty','17');"
+                  alt="Waltz Beauty"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Waltz Beauty</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGTotemWarrior.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGTotemWarrior','17');"
+                  alt="Totem Warrior"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Totem Warrior</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGArcticHunt.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGArcticHunt','17');"
+                  alt="Arctic Hunt"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Arctic Hunt</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGMooMooCow.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGMooMooCow','17');"
+                  alt="Moo Moo Cow"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Moo Moo Cow</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGGoldenTajMahal.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGGoldenTajMahal','17');"
+                  alt="Golden Taj Mahal"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Golden Taj Mahal</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGWildFlow.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGWildFlow','17');"
+                  alt="Wild Flow"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wild Flow</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGVampiresFate.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGVampiresFate','17');"
+                  alt="Vampire's Fate"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Vampire's Fate</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGHotHotSummer.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGHotHotSummer','17');"
+                  alt="Hot Hot Summer"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Hot Hot Summer</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGValentineMonchy.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGValentineMonchy','17');"
+                  alt="Valentine Monchy"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Valentine Monchy</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGFruityMayan.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGFruityMayan','17');"
+                  alt="Fruity Mayan"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Fruity Mayan</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGSantasInn.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGSantasInn','17');"
+                  alt="Santa's Inn"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Santa's Inn</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGZeusDeluxe.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGZeusDeluxe','17');"
+                  alt="Zeus Deluxe"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Zeus Deluxe</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGFruityHalloween.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGFruityHalloween','17');"
+                  alt="Fruity Halloween"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Fruity Halloween</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGSlimeParty.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGSlimeParty','17');"
+                  alt="Slime Party"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Slime Party</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGMeowJanken.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGMeowJanken','17');"
+                  alt="Meow Janken"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Meow Janken</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGBikiniIslandDeluxe.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGBikiniIslandDeluxe','17');"
+                  alt="Bikini Island Deluxe"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Bikini Island Deluxe</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGAtomicKittens.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGAtomicKittens','17');"
+                  alt="Atomic Kittens"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Atomic Kittens</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGWitchesTome.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGWitchesTome','17');"
+                  alt="Witches Tome"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Witches Tome</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGLegendOfNezha.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGLegendOfNezha','17');"
+                  alt="Legend of Nezha"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Legend of Nezha</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGTootyFruityFruits.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGTootyFruityFruits','17');"
+                  alt="Tooty Fruity Fruits"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Tooty Fruity Fruits</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGSirensSpell.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGSirensSpell','17');"
+                  alt="Siren’s Spell"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Siren’s Spell</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGCrystopia.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGCrystopia','17');"
+                  alt="Crystopia"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Crystopia</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGTheBigDealDeluxe.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGTheBigDealDeluxe','17');"
+                  alt="The Big Deal Deluxe"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >The Big Deal Deluxe</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGNaughtyWukong.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGNaughtyWukong','17');"
+                  alt="Naughty Wukong"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Naughty Wukong</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGLegendaryBeasts.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGLegendaryBeasts','17');"
+                  alt="Legendary Beasts"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Legendary Beasts</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGRainbowmania.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGRainbowmania','17');"
+                  alt="Rainbowmania"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Rainbowmania</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGDragonTigerGate.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGDragonTigerGate','17');"
+                  alt="Dragon Tiger gate"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Dragon Tiger gate</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGSojuBomb.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGSojuBomb','17');"
+                  alt="Soju Bomb"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Soju Bomb</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGTukTukThailand.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGTukTukThailand','17');"
+                  alt="Tuk Tuk Thailand"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Tuk Tuk Thailand</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGTaikoBeats.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGTaikoBeats','17');"
+                  alt="Taiko Beats"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Taiko Beats</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGLaughingBuddha.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGLaughingBuddha','17');"
+                  alt="Laughing Buddha"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Laughing Buddha</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGSpaceGoonz.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGSpaceGoonz','17');"
+                  alt="Space Goonz"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Space Goonz</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGGoldenUnicornDeluxe.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGGoldenUnicornDeluxe','17');"
+                  alt="Golden Unicorn Deluxe"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Golden Unicorn Deluxe</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGBombRunner.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGBombRunner','17');"
+                  alt="Bomb Runner"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Bomb Runner</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGMightyMedusa.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGMightyMedusa','17');"
+                  alt="Mighty Medusa"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Mighty Medusa</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGDiscoBeats.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGDiscoBeats','17');"
+                  alt="Disco Beats"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Disco Beats</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGLanternLuck.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGLanternLuck','17');"
+                  alt="Lantern Luck"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Lantern Luck</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGLuckyDurian.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGLuckyDurian','17');"
+                  alt="Lucky Durian"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Lucky Durian</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGNewYearsBash.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGNewYearsBash','17');"
+                  alt="New Years Bash"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">New Years Bash</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGProst.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGProst','17');"
+                  alt="Prost!"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Prost!</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGNineTails.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGNineTails','17');"
+                  alt="Nine Tails"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Nine Tails</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGFly.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGFly','17');"
+                  alt="Fly!"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Fly!</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGMysticFortuneDeluxe.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGMysticFortuneDeluxe','17');"
+                  alt="Mystic Fortune Deluxe"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Mystic Fortune Deluxe</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGCalaverasExplosivas.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGCalaverasExplosivas','17');"
+                  alt="Calaveras Explosivas"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Calaveras Explosivas</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGMarvelousFurlongs.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGMarvelousFurlongs','17');"
+                  alt="Marvelous Furlongs"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Marvelous Furlongs</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGCandyTower.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGCandyTower','17');"
+                  alt="Candy Tower"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Candy Tower</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGReturnToTheFeature.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGReturnToTheFeature','17');"
+                  alt="Return To The Feature"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Return To The Feature</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGBeforeTimeRunsOut.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGBeforeTimeRunsOut','17');"
+                  alt="Before Time Runs Out"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Before Time Runs Out</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGOrbsOfAtlantis.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGOrbsOfAtlantis','17');"
+                  alt="Orbs of Atlantis"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Orbs of Atlantis</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGTotemTowers.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGTotemTowers','17');"
+                  alt="Totem Towers"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Totem Towers</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGChristmasGiftRush.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGChristmasGiftRush','17');"
+                  alt="Christmas Gift Rush"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Christmas Gift Rush</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGTabernaDeLosMuertos.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGTabernaDeLosMuertos','17');"
+                  alt="Taberna De Los Muertos"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Taberna De Los Muertos</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGTabernaDeLosMuertosUltra.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGTabernaDeLosMuertosUltra','17');"
+                  alt="Taberna De Los Muertos Ultra"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Taberna De Los Muertos Ultra</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGHappyApe.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGHappyApe','17');"
+                  alt="Happy Ape"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Happy Ape</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGJellyfishFlow.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGJellyfishFlow','17');"
+                  alt="Jellyfish Flow"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Jellyfish Flow</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGJellyfishFlowUltra.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGJellyfishFlowUltra','17');"
+                  alt="Jellyfish Flow Ultra"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Jellyfish Flow Ultra</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGWealthInn.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGWealthInn','17');"
+                  alt="Wealth Inn"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wealth Inn</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGHeySushi.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGHeySushi','17');"
+                  alt="Hey Sushi"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Hey Sushi</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGScopa.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGScopa','17');"
+                  alt="Scopa"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Scopa</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGTechnoTumble.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGTechnoTumble','17');"
+                  alt="Techno Tumble"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Techno Tumble</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGLuckyFortuneCat.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGLuckyFortuneCat','17');"
+                  alt="Lucky Fortune Cat"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Lucky Fortune Cat</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGKnockoutFootballRush.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGKnockoutFootballRush','17');"
+                  alt="Knockout Football Rush"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Knockout Football Rush</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGLoonyBlox.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGLoonyBlox','17');"
+                  alt="Loony Blox"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Loony Blox</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGFaCaiShenDeluxe.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGFaCaiShenDeluxe','17');"
+                  alt="Fa Cai Shen Deluxe"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Fa Cai Shen Deluxe</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGNaughtySanta.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGNaughtySanta','17');"
+                  alt="Naughty Santa"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Naughty Santa</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGHotHotHalloween.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGHotHotHalloween','17');"
+                  alt="Hot Hot Halloween"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Hot Hot Halloween</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGWizardsWantWar.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGWizardsWantWar','17');"
+                  alt="Wizards Want War!"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Wizards Want War!</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGColossalGems.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGColossalGems','17');"
+                  alt="Colossal Gems"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Colossal Gems</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGNuwa.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGNuwa','17');"
+                  alt="Nuwa"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Nuwa</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGWildTrucks.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGWildTrucks','17');"
+                  alt="Wild Trucks"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wild Trucks</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGLuckyLucky.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGLuckyLucky','17');"
+                  alt="Lucky Lucky"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Lucky Lucky</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGMagicOak.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGMagicOak','17');"
+                  alt="Magic Oak"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Magic Oak</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGMountMazuma.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGMountMazuma','17');"
+                  alt="Mount Mazuma"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Mount Mazuma</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SG5LuckyLions.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SG5LuckyLions','17');"
+                  alt="5 Lucky Lions"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">5 Lucky Lions</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGHotHotFruit.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGHotHotFruit','17');"
+                  alt="Hot Hot Fruit"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Hot Hot Fruit</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGHappiestChristmasTree.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGHappiestChristmasTree','17');"
+                  alt="Happiest Christmas Tree"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Happiest Christmas Tree</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGPumpkinPatch.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGPumpkinPatch','17');"
+                  alt="Pumpkin Patch"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Pumpkin Patch</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGJump.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGJump','17');"
+                  alt="Jump!"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Jump!</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGEgyptianDreamsDeluxe.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGEgyptianDreamsDeluxe','17');"
+                  alt="Egyptian Dreams Deluxe"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Egyptian Dreams Deluxe</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGWaysOfFortune.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGWaysOfFortune','17');"
+                  alt="Ways Of Fortune"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Ways Of Fortune</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGKnockoutFootball.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGKnockoutFootball','17');"
+                  alt="Knockout Football"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Knockout Football</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGFortuneDogs.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGFortuneDogs','17');"
+                  alt="Fortune Dogs"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Fortune Dogs</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGPresto.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGPresto','17');"
+                  alt="Presto!"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Presto!</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGLondonHunter.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGLondonHunter','17');"
+                  alt="London Hunter"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">London Hunter</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGFourDivineBeasts.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGFourDivineBeasts','17');"
+                  alt="Four Divine Beasts"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Four Divine Beasts</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SG5Mariachis.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SG5Mariachis','17');"
+                  alt="5 Mariachis"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">5 Mariachis</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGSantasVillage.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGSantasVillage','17');"
+                  alt="Santa's Village"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Santa's Village</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGRollingRoger.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGRollingRoger','17');"
+                  alt="Rolling Roger"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Rolling Roger</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGCakeValley.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGCakeValley','17');"
+                  alt="Cake Valley"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Cake Valley</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGScruffyScallywags.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGScruffyScallywags','17');"
+                  alt="Scruffy Scallywags"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Scruffy Scallywags</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGTheDeadEscape.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGTheDeadEscape','17');"
+                  alt="The Dead Escape"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >The Dead Escape</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGPandaPanda.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGPandaPanda','17');"
+                  alt="Panda Panda"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Panda Panda</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGBirdOfThunder.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGBirdOfThunder','17');"
+                  alt="Bird of Thunder"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Bird of Thunder</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGTheKoiGate.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGTheKoiGate','17');"
+                  alt="Koi Gate"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Koi Gate</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGFireRooster.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGFireRooster','17');"
+                  alt="Fire Rooster"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Fire Rooster</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGFenghuang.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGFenghuang','17');"
+                  alt="Fenghuang"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Fenghuang</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGJugglenaut.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGJugglenaut','17');"
+                  alt="Jugglenaut"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Jugglenaut</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGOceansCall.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGOceansCall','17');"
+                  alt="Ocean's Call"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Ocean's Call</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGGangsters.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGGangsters','17');"
+                  alt="Gangsters"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Gangsters</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGSparta.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGSparta','17');"
+                  alt="Sparta"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Sparta</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGSuperTwister.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGSuperTwister','17');"
+                  alt="Super Twister"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Super Twister</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SG12Zodiacs.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SG12Zodiacs','17');"
+                  alt="12 Zodiacs"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">12 Zodiacs</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGArcaneElements.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGArcaneElements','17');"
+                  alt="Arcane Elements"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Arcane Elements</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGDragonsThrone.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGDragonsThrone','17');"
+                  alt="Dragon's Throne"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Dragon's Throne</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGCoyoteCrash.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGCoyoteCrash','17');"
+                  alt="Coyote Crash"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Coyote Crash</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGRomanEmpire.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGRomanEmpire','17');"
+                  alt="Roman Empire"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Roman Empire</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGRuffledUp.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGRuffledUp','17');"
+                  alt="Ruffled Up"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Ruffled Up</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGFaCaiShen.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGFaCaiShen','17');"
+                  alt="Fa Cai Shen"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Fa Cai Shen</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGBombsAway.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGBombsAway','17');"
+                  alt="Bombs Away"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Bombs Away</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGGoldRush.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGGoldRush','17');"
+                  alt="Gold Rush"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Gold Rush</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGWickedWitch.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGWickedWitch','17');"
+                  alt="Wicked Witch"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wicked Witch</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGGalacticCash.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGGalacticCash','17');"
+                  alt="Galactic Cash"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Galactic Cash</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGBuggyBonus.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGBuggyBonus','17');"
+                  alt="Buggy Bonus"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Buggy Bonus</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGKanesInferno.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGKanesInferno','17');"
+                  alt="Kane's Inferno"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Kane's Inferno</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGAllForOne.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGAllForOne','17');"
+                  alt="All For One"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">All For One</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGArcticWonders.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGArcticWonders','17');"
+                  alt="Arctic Wonders"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Arctic Wonders</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGAzlandsGold.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGAzlandsGold','17');"
+                  alt="Aztlan's Gold"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Aztlan's Gold</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGBarnstormerBucks.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGBarnstormerBucks','17');"
+                  alt="Barnstormer Bucks"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Barnstormer Bucks</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGBikiniIsland.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGBikiniIsland','17');"
+                  alt="Bikini Island"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Bikini Island</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGBlackbeardsBounty.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGBlackbeardsBounty','17');"
+                  alt="Blackbeard's Bounty"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Blackbeard's Bounty</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGCarnivalCash.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGCarnivalCash','17');"
+                  alt="Carnival Cash"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Carnival Cash</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGCashosaurus.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGCashosaurus','17');"
+                  alt="Cashosaurus"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Cashosaurus</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGCashReef.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGCashReef','17');"
+                  alt="Cash Reef"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Cash Reef</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGDiscoFunk.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGDiscoFunk','17');"
+                  alt="Disco Funk"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Disco Funk</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGDoubleODollars.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGDoubleODollars','17');"
+                  alt="Double O Dollars"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Double O Dollars</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGDragonsRealm.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGDragonsRealm','17');"
+                  alt="Dragon's Realm"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Dragon's Realm</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGDrFeelgood.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGDrFeelgood','17');"
+                  alt="Dr Feelgood"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Dr Feelgood</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGEgyptianDreams.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGEgyptianDreams','17');"
+                  alt="Egyptian Dreams"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Egyptian Dreams</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGFlyingHigh.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGFlyingHigh','17');"
+                  alt="Flying High"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Flying High</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGFrontierFortunes.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGFrontierFortunes','17');"
+                  alt="Frontier Fortunes"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Frontier Fortunes</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGGlamRock.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGGlamRock','17');"
+                  alt="Glam Rock"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Glam Rock</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGGoldenUnicorn.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGGoldenUnicorn','17');"
+                  alt="Golden Unicorn"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Golden Unicorn</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGGrapeEscape.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGGrapeEscape','17');"
+                  alt="Grape Escape"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Grape Escape</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGHauntedHouse.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGHauntedHouse','17');"
+                  alt="Haunted House"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Haunted House</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGIndianCashCatcher.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGIndianCashCatcher','17');"
+                  alt="Indian Cash Catcher"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Indian Cash Catcher</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGJungleRumble.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGJungleRumble','17');"
+                  alt="Jungle Rumble"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Jungle Rumble</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGKingTutsTomb.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGKingTutsTomb','17');"
+                  alt="King Tut's Tomb"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >King Tut's Tomb</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGLittleGreenMoney.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGLittleGreenMoney','17');"
+                  alt="Little Green Money"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Little Green Money</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGMonsterMashCash.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGMonsterMashCash','17');"
+                  alt="Monster Mash Cash"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Monster Mash Cash</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGMrBling.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGMrBling','17');"
+                  alt="Mr Bling"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Mr Bling</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGMummyMoney.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGMummyMoney','17');"
+                  alt="Mummy Money"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Mummy Money</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGMysticFortune.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGMysticFortune','17');"
+                  alt="Mystic Fortune"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Mystic Fortune</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGPamperMe.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGPamperMe','17');"
+                  alt="Pamper Me"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Pamper Me</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGPiratesPlunder.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGPiratesPlunder','17');"
+                  alt="Pirate's Plunder"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Pirate's Plunder</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGPoolShark.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGPoolShark','17');"
+                  alt="Pool Shark"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Pool Shark</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGPuckerUpPrince.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGPuckerUpPrince','17');"
+                  alt="Pucker Up Prince"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Pucker Up Prince</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGQueenOfQueens1024.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGQueenOfQueens1024','17');"
+                  alt="Queen of Queens II"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Queen of Queens II</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGQueenOfQueens243.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGQueenOfQueens243','17');"
+                  alt="Queen of Queens"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Queen of Queens</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGRideEmCowboy.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGRideEmCowboy','17');"
+                  alt="Ride 'em Cowboy"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Ride 'em Cowboy</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGRodeoDrive.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGRodeoDrive','17');"
+                  alt="Rodeo Drive"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Rodeo Drive</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGShaolinFortunes100.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGShaolinFortunes100','17');"
+                  alt="Shaolin Fortunes 100"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Shaolin Fortunes 100</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGShaolinFortunes243.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGShaolinFortunes243','17');"
+                  alt="Shaolin Fortunes"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Shaolin Fortunes</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGShogunsLand.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGShogunsLand','17');"
+                  alt="Shogun's Land"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Shogun's Land</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGSirBlingalot.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGSirBlingalot','17');"
+                  alt="Sir Blingalot"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Sir Blingalot</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGSkysTheLimit.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGSkysTheLimit','17');"
+                  alt="Sky's the Limit"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Sky's the Limit</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGSOS.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGSOS','17');"
+                  alt="S.O.S!"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">S.O.S!</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGSpaceFortune.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGSpaceFortune','17');"
+                  alt="Space Fortune"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Space Fortune</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGSuperStrike.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGSuperStrike','17');"
+                  alt="Super Strike"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Super Strike</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGTheBigDeal.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGTheBigDeal','17');"
+                  alt="The Big Deal"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">The Big Deal</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGTheDragonCastle.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGTheDragonCastle','17');"
+                  alt="Dragon Castle"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Dragon Castle</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGTowerOfPizza.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGTowerOfPizza','17');"
+                  alt="Tower Of Pizza"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Tower Of Pizza</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGTreasureDiver.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGTreasureDiver','17');"
+                  alt="Treasure Diver"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Treasure Diver</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGTreasureTomb.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGTreasureTomb','17');"
+                  alt="Treasure Tomb"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Treasure Tomb</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGVikingsPlunder.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGVikingsPlunder','17');"
+                  alt="Viking's Plunder"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Viking's Plunder</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGWeirdScience.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGWeirdScience','17');"
+                  alt="Weird Science"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Weird Science</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGZeus.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGZeus','17');"
+                  alt="Zeus"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Zeus</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/habanero/SGZeus2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('SGZeus2','17');"
+                  alt="Zeus 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Zeus 2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--FOOTER -->
+    <footer>
+      <div class="footer-logos">
+        <img src="images/footer-logos.png" alt="Partners" />
+      </div>
+      <div class="footer-nav">
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>ABOUT</h4>
+            <ul>
+              <li><a href="#">보너스</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">메세지 보내기</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>SERVICES</h4>
+            <ul>
+              <li><a href="#">입금</a></li>
+              <li><a href="#">출금</a></li>
+              <li><a href="#">머니이동</a></li>
+              <li><a href="#">프로모션 신청</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>BANKS</h4>
+            <ul>
+              <li>Neteller</li>
+              <li>Moneybookers</li>
+              <li>MasterCard</li>
+              <li>Bitcoin</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END OF FOOTER -->
+
+    <script src="js/realtime.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/homescripts.js"></script>
+  </body>
+</html>

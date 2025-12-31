@@ -1,0 +1,179 @@
+@font-face {
+    font-family: "BinggraeII";
+    src: url("../fonts/BinggraeII.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+html, body {
+    font-family: "BinggraeII", -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 16px;
+    background-color: #f4f9ff;
+}
+
+.header,
+.realtime {
+    font-family: "BinggraeII", sans-serif;
+}
+
+/* HEADER & BUTTON */
+.header {
+    width: 100%;
+    background: linear-gradient(to bottom, #f0c895, #d58f4a);
+}
+
+/* 50% centered container */
+.header-inner {
+    width: 60%;
+    margin: 0 auto; /* centers horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* left & right */
+}
+
+/* Contact image */
+.contact {
+    max-width: 385px;
+    width: 100%;
+}
+
+/* Right-side real-time info */
+.realtime {
+    color: #484149;
+    font-size: 13px;
+    display: inline-flex;   
+    gap: 8px;  
+    align-items: center; 
+    line-height: 1; 
+}
+.korea-active {
+    height: 16px;
+    width: auto;
+    display: block;  
+}
+/* Main Navbar */
+.top-nav {
+  position: relative; 
+  z-index: 1000; 
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+  font-family: 'BinggraeII', sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.top-nav-inner {
+  width: 60%;
+  margin: 0 auto;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.nav-logo img {
+  height: 50px;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  position: relative;
+  font-size: 16px;
+  font-weight: 200;
+  color: #222;
+  text-decoration: none;
+  padding: 6px 0;
+  transition: color 0.25s ease;
+  cursor: pointer;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: #edbe8a;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -18px;
+  width: 0;
+  height: 3px;
+  background: #edbe8a;
+  transition: width 0.25s ease;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+  width: 100%;
+  font-weight: 600;
+}
+
+/* Push left + right apart */
+.top-nav-inner {
+  justify-content: space-between;
+}
+
+/* Right container */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Profile avatar */
+.profile img {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  border: 1px solid #808080;
+  object-fit: cover;
+}
+
+/* Login + Buddy wrapper */
+.auth-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  line-height: 1.2;
+}
+
+/* Login / Register */
+.login-link {
+  font-size: 14px;
+  color: #edbe8a;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.login-link:hover {
+  color: #edbe8a;
+  text-decoration: underline;
+}
+
+/* Buddy Bonus (text only) */
+.buddy-link {
+  font-size: 13px;
+  color: #9cbb2f;
+  text-decoration: none;
+  margin-top: 2px;
+}
+
+.buddy-link:hover {
+  color: #9cbb2f;
+  text-decoration: underline;
+}
+

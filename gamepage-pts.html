@@ -1,0 +1,4780 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ASIANCONNECT</title>
+    <link rel="icon" href="images/weblogo.png" type="image/png" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="css/login-register.css" />
+    <link rel="stylesheet" type="text/css" href="css/gamepage.css" />
+  </head>
+
+  <body>
+    <!-- Header Navbar -->
+    <div class="header">
+      <div class="header-inner">
+        <img class="contact" src="Images/contact.png" alt="contact" />
+        <div class="realtime">
+          <span id="date_time"></span>
+          <img src="Images/korea.png" class="korea-active" alt="korea" />
+        </div>
+      </div>
+    </div>
+    <!-- Primary Navbar -->
+    <div class="top-nav">
+      <div class="top-nav-inner">
+        <!-- LEFT -->
+        <div class="nav-left">
+          <div class="nav-logo">
+            <img
+              src="Images/headerlogo.png"
+              alt="Logo"
+              onclick="location.href='index.html'"
+            />
+          </div>
+          <nav class="nav-menu">
+            <a
+              href="deposit.html"
+              class="<?= ($page === 'deposit') ? 'active' : '' ?>"
+              >입금</a
+            >
+            <a
+              href="withdraw.html"
+              class="<?= ($page === 'withdraw') ? 'active' : '' ?>"
+              >출금</a
+            >
+            <a
+              href="transfer.html"
+              class="<?= ($page === 'transfer') ? 'active' : '' ?>"
+              >머니이동</a
+            >
+            <a
+              href="sports.html"
+              class="<?= ($page === 'sports') ? 'active' : '' ?>"
+              >스포츠</a
+            >
+            <a
+              href="casino.html"
+              class="<?= ($page === 'casino') ? 'active' : '' ?>"
+              >카지노</a
+            >
+            <a
+              href="slots.html"
+              class="<?= ($page === 'slots') ? 'active' : '' ?>"
+              >슬롯</a
+            >
+            <a
+              href="bonus.html"
+              class="<?= ($page === 'bonus') ? 'active' : '' ?>"
+              >보너스</a
+            >
+            <a
+              href="customer-service.html"
+              class="<?= ($page === 'customer-service') ? 'active' : '' ?>"
+              >고객센터</a
+            >
+            <a
+              href="streaming.html"
+              class="<?= ($page === 'streaming') ? 'active' : '' ?>"
+              >스트리밍</a
+            >
+          </nav>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="nav-right">
+          <div class="profile">
+            <img src="Images/profile.png" alt="Profile" />
+          </div>
+
+          <div class="auth-box">
+            <a href="#" class="login-link" id="openLogin">로그인 / 회원가입</a>
+            <a href="#" class="buddy-link">Buddy 보너스</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Primary Navbar -->
+
+    <!-- Login Modal -->
+    <div class="login-modal-overlay" id="loginModal">
+      <div class="login-modal">
+        <span class="login-close" id="closeLogin">&times;</span>
+
+        <!-- Logo -->
+        <div class="login-logo">
+          <img src="images/headerlogo.png" alt="Logo" />
+        </div>
+
+        <!-- LOGIN FORM -->
+        <form class="login-form" method="post" action="login.html">
+          <div class="input-group">
+            <span class="icon">👤</span>
+            <input type="text" name="username" placeholder="아이디" required />
+          </div>
+          <div class="input-group">
+            <span class="icon">🔒</span>
+            <input
+              type="password"
+              name="password"
+              id="passwordInput"
+              placeholder="비밀번호"
+              required
+            /><span class="toggle-password" id="togglePassword">👁</span>
+          </div>
+
+          <!-- Find ID / Password -->
+          <div class="login-links">
+            <a href="find-id.html">아이디</a><span>|</span
+            ><a href="find-password.html">비밀번호찾기</a>
+          </div>
+
+          <!-- Login Button -->
+          <button type="submit" class="login-btn">로그인</button>
+
+          <!-- Quick Action Buttons -->
+          <div class="login-quick-buttons">
+            <a href="buddy-bonus.html" class="quick-btn">
+              <img src="images/login-icon-buddy.png" alt="Buddy 보너스" />
+              <span>Buddy 보너스</span>
+            </a>
+            <a href="register.html" class="quick-btn register-fancy">
+              <img src="images/login-icon-register.png" alt="회원가입" />
+              <span>회원가입</span>
+            </a>
+            <a href="support.html" class="quick-btn">
+              <img src="images/login-icon-cs.png" alt="고객 서비스" />
+              <span>고객 서비스</span>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Game Page -->
+    <div class="gamepage-title-wrap">
+      <img src="images/game-title-pts.png" alt="Game Menu Title" />
+    </div>
+
+    <!-- TAB CONTENT -->
+    <div class="fancy-box">
+      <div class="column-sltmpage">
+        <div class="sltm-games">
+          <div class="row-sltm">
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/712.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('712','219');"
+                  alt="Triple Money Jackpot™ Bells"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >트리플 머니 잭팟 벨즈</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/713.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('713','219');"
+                  alt="Triple Money Jackpot™ Spicy!"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >트리플 머니 잭팟 스파이시!</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/714.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('714','219');"
+                  alt="Triple Money Jackpot™ Gold!"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >트리플 머니 잭팟 골드!</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/715.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('715','219');"
+                  alt="Blackjack LINK™"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">블랙잭 링크</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/716.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('716','219');"
+                  alt="King of Giza: Mega Cash Collect & Link™"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >킹 오브 기자: 메가 현금 사냥 & 링크</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/717.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('717','219');"
+                  alt="Jo Blitz™"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">조 블리츠</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/718.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('718','219');"
+                  alt="Epic Fish: Marlin Madness"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >전설 의 대어: 광란의 청새치</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/719.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('719','219');"
+                  alt="Mad Hit Devil"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">매드 히트 데빌</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/720.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('720','219');"
+                  alt="J Mania Lucky Pyggs"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >제이 매니아 행운의 돼지</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/721.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('721','219');"
+                  alt="J Mania Maniac"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >제이 매니아 매니악</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/722.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('722','219');"
+                  alt="Giga Match Phantasmal"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >기가 매치 유령의 집</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/728.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('728','219');"
+                  alt="9 Stars Ablaze"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >불타는 9개의 별</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/729.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('729','219');"
+                  alt="15 Stars Ablaze"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >불타는 15개의 별</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/730.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('730','219');"
+                  alt="Rabbit and the Fox"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">토끼와 여우</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/731.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('731','219');"
+                  alt="Roving Clover"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >방랑하는 클로버</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/732.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('732','219');"
+                  alt="Mad Hit Mr Coin"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >매드 히트 미스터 코인</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/733.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('733','219');"
+                  alt="Mad Hit Slippery Soap"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >매드 히트 미끄러운 비누</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/734.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('734','219');"
+                  alt="Wild Beans"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">와일드 빈즈</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/735.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('735','219');"
+                  alt="Ten Ton Ways Odin's Gifts"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >텐 톤 웨이즈: 오딘의 선물</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/736.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('736','219');"
+                  alt="The Grim Reaper"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">사신</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/737.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('737','219');"
+                  alt="Giga Match Mahjong"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">기가 매치 마작</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/3.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('3','219');"
+                  alt="Lil Sphinx"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">릴 스핑크스</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/4.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4','219');"
+                  alt="Piggies and the Bank: Cash Collect & Link"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >돼지와 은행: 현금 수집 및 링크</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/5.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5','219');"
+                  alt="Fluffy Favourites: Cash Collect"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >플러피 페이버릿: 캐시 컬렉션</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/6.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6','219');"
+                  alt="Immortal Ways Cleopatra"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >불멸의 길 클레오파트라</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/7.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7','219');"
+                  alt="Go High Puppy Love"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >고 하이 퍼피 러브</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/8.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8','219');"
+                  alt="He He Yang"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">허허양</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/10.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('10','219');"
+                  alt="Gummy Giga Match"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">구미 기가 매치</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/11.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('11','219');"
+                  alt="Immortal Ways Lady Moon"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >불멸의 길 레이디 문</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/12.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('12','219');"
+                  alt="Diamond Explosion 7s"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >다이아몬드 폭발 7s</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/13.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('13','219');"
+                  alt="Go High Panda"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">고 하이팬더</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/18.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('18','219');"
+                  alt="Lights of luck"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">행운의 빛</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/20.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('20','219');"
+                  alt="Goood Heavens"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">굿 헤븐스</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/23.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('23','219');"
+                  alt="Breach the Vault"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">금고를 부수기</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/26.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('26','219');"
+                  alt="Candy Roll"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">캔디 롤</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/27.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('27','219');"
+                  alt="Circuit Shock"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">서킷 쇼크</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/28.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('28','219');"
+                  alt="Diamond Match Deluxe"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >다이아몬드 매치 디럭스</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/29.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('29','219');"
+                  alt="Double Digger"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">더블 디거</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/31.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('31','219');"
+                  alt="Elephant Riches"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">코끼리 부</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/32.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('32','219');"
+                  alt="Fei Long Zai Tian"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">페이롱자이톈</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/33.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('33','219');"
+                  alt="Feng Shui Flip"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >풍수지리 뒤집기</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/34.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('34','219');"
+                  alt="Fire Blaze: Sky Queen Megaways"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈: 스카이 퀸 메가웨이즈</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/36.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('36','219');"
+                  alt="Full Moon: White King"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">보름달: 백왕</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/37.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('37','219');"
+                  alt="Gates of Camelot"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">카멜롯의 문</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/39.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('39','219');"
+                  alt="Gold Hit & Link: Tiger Jones"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >골드 히트 & 링크: 타이거 존스</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/40.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('40','219');"
+                  alt="Gold Hit: Lil Demon"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >골드 히트: 릴 데몬</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/41.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('41','219');"
+                  alt="Gold Trio"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">골드 트리오</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/42.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('42','219');"
+                  alt="Hot Gems"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">핫 젬스</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/43.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('43','219');"
+                  alt="Lil Demon: Mega Cash Collect"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >릴 데몬: 메가 캐시 컬렉션</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/45.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('45','219');"
+                  alt="Lucky Bass: Mega Cash Collect"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >럭키 베이스: 메가 캐시 컬렉션</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/49.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('49','219');"
+                  alt="Mega Fire Blaze: Dwarves and Goblins"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >메가 파이어 블레이즈: 드워프와 고블린</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/50.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('50','219');"
+                  alt="Panther Moon: Bonus Lines"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >팬서 문: 보너스 라인</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/55.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('55','219');"
+                  alt="Samurai Fury"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">사무라이 분노</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/56.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('56','219');"
+                  alt="Sinbad's Golden Voyage"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >신밧드의 황금 항해</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/57.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('57','219');"
+                  alt="Spin 'Em Round!"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >회전시켜 주세요!</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/58.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('58','219');"
+                  alt="Sweet N Juicy"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">스위트 N 쥬시</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/61.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('61','219');"
+                  alt="Wolves! Cash Collect & Link"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >늑대들! 현금 수집 및 링크</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/88.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('88','219');"
+                  alt="1-Of-A-Kind"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">유일무이한</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/89.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('89','219');"
+                  alt="28 Mansions"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">28 맨션</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/90.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('90','219');"
+                  alt="A Night Out"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">나이트 아웃</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/91.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('91','219');"
+                  alt="Absolutely Mammoth"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">절대 매머드</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/93.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('93','219');"
+                  alt="Age of Egypt"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">이집트 시대</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/102.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('102','219');"
+                  alt="Age of the Gods Scratch"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >신들의 시대 스크래치</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/124.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('124','219');"
+                  alt="Alohawaii: Cash Collect"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >알로하와이: 현금 수집</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/125.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('125','219');"
+                  alt="Anaconda Uncoiled"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >아나콘다 언코일</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/126.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('126','219');"
+                  alt="Anaconda Wild"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >아나콘다 와일드</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/127.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('127','219');"
+                  alt="Anaconda Wild 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >아나콘다 와일드 2</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/129.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('129','219');"
+                  alt="Anaconda Wild Scratch"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >아나콘다 와일드 스크래치</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/130.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('130','219');"
+                  alt="Animal Instinct"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">동물 본능</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/131.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('131','219');"
+                  alt="Archer"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">아처</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/132.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('132','219');"
+                  alt="Arowana's Luck"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >아로와나의 행운</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/133.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('133','219');"
+                  alt="Asian Fantasy"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">아시안 판타지</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/134.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('134','219');"
+                  alt="Atlantis: Cash Collect"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >아틀란티스: 현금 수집</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/135.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('135','219');"
+                  alt="Aztec Expedition Thundershots"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >아즈텍 탐험 썬더샷</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/136.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('136','219');"
+                  alt="Azteca: Bonus Lines"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >아즈테카: 보너스 라인</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/138.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('138','219');"
+                  alt="Azteca: Cash Collect"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >아즈테카: 캐시 콜렉트</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/139.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('139','219');"
+                  alt="Bai Shi"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">바이시</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/141.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('141','219');"
+                  alt="Bee Frenzy"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">꿀벌 광란</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/142.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('142','219');"
+                  alt="Bermuda Triangle"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >버뮤다 삼각지대</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/143.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('143','219');"
+                  alt="Berry Berry Bonanza"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >베리 베리 보난자</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/144.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('144','219');"
+                  alt="Better Wilds"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">베터 와일드</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/146.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('146','219');"
+                  alt="Big Shots"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">빅 샷</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/147.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('147','219');"
+                  alt="Blazing Bells"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">불타는 종들</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/149.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('149','219');"
+                  alt="Blitz Scratch"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >블리츠 스크래치</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/150.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('150','219');"
+                  alt="Bonus Bears"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">보너스 베어스</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/151.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('151','219');"
+                  alt="Bonus Train Bandits"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >보너스 기차 산적들</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/152.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('152','219');"
+                  alt="Book of Kings"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">왕의 책</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/155.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('155','219');"
+                  alt="Breakout Bob"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >브레이크아웃 밥</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/156.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('156','219');"
+                  alt="Buccaneer Blast"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >버캐니어 블라스트</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/157.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('157','219');"
+                  alt="Buckle Up"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">버클 업</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/158.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('158','219');"
+                  alt="Buffalo Blitz"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">버팔로 블리츠</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/159.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('159','219');"
+                  alt="Buffalo Blitz II"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >버팔로 블리츠 II</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/162.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('162','219');"
+                  alt="Caishen Ways"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">카이셴 웨이즈</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/163.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('163','219');"
+                  alt="Captain's Treasure"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">캡틴의 보물</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/164.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('164','219');"
+                  alt="Cascading Cave"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">계단식 동굴</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/165.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('165','219');"
+                  alt="Cash Collect Scratch"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >현금 수집 스크래치</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/166.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('166','219');"
+                  alt="Casino Charms"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">카지노 참스</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/168.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('168','219');"
+                  alt="Cat Queen"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">캣 퀸</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/169.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('169','219');"
+                  alt="Chaoji 888"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">차오지 888</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/170.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('170','219');"
+                  alt="Chili Eruption"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">칠리 대폭발</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/171.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('171','219');"
+                  alt="Chilli Xtreme"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">칠리 익스트림</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/173.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('173','219');"
+                  alt="Chinese Kitchen"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">중국식 주방</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/176.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('176','219');"
+                  alt="Crazy 7"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">미친 7</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/178.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('178','219');"
+                  alt="Curse of Anubis"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >아누비스의 저주</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/179.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('179','219');"
+                  alt="Da Vinci's Vault"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">다빈치의 금고</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/180.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('180','219');"
+                  alt="Desert Treasure"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">사막의 보물</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/181.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('181','219');"
+                  alt="Devil Wilds"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">데빌 와일드</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/182.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('182','219');"
+                  alt="Diamond Match"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >다이아몬드 매치</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/183.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('183','219');"
+                  alt="Diamond Rise"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >다이아몬드 라이즈</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/184.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('184','219');"
+                  alt="Divine 9"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">신성한 9</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/186.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('186','219');"
+                  alt="Dolphin Reef"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">돌핀 리프</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/187.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('187','219');"
+                  alt="Dragon Champions"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">드래곤 챔피언</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/188.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('188','219');"
+                  alt="Dragon Chi"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">용치</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/189.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('189','219');"
+                  alt="Dragon Spark"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">드래곤 스파크</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/190.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('190','219');"
+                  alt="Dragon's Hall: Thundershots"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >드래곤즈 홀: 썬더샷</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/191.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('191','219');"
+                  alt="Easter Surprise"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >부활절 서프라이즈</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/192.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('192','219');"
+                  alt="Egyptian Emeralds"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >이집트 에메랄드</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/194.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('194','219');"
+                  alt="Eliminators"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">제거자</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/195.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('195','219');"
+                  alt="Empire Treasures Scratch"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >엠파이어 트레저 스크래치</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/196.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('196','219');"
+                  alt="Epic Ape"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">에픽 에이프</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/200.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('200','219');"
+                  alt="Extreme Fruits Ultimate Deluxe"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >익스트림 프루트 얼티밋 디럭스</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/201.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('201','219');"
+                  alt="Eye of Anubis"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">아누비스의 눈</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/202.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('202','219');"
+                  alt="Fairground Fortunes Ghost Train"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >페어그라운드 포춘 고스트 트레인</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/203.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('203','219');"
+                  alt="Fairy Gathering: Thundershots"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >요정 모임: 썬더샷</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/205.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('205','219');"
+                  alt="Feng Kuang Ma Jiang"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">펑광 마장</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/206.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('206','219');"
+                  alt="Fire 4: Cash Collect Quattro"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 4: 캐시 콜렉트 콰트로</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/207.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('207','219');"
+                  alt="Fire Blaze Golden: Amazing Factory"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈 골든: 어메이징 팩토리</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/208.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('208','219');"
+                  alt="Fire Blaze Golden: Buccaneer Bells"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈 골든: 버캐니어 벨즈</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/209.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('209','219');"
+                  alt="Fire Blaze Quattro: Celtic Charm"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈 콰트로: 켈틱 참</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/210.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('210','219');"
+                  alt="Fire Blaze Scratch"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈 스크래치</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/211.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('211','219');"
+                  alt="Fire Blaze: Adventure Trail"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈: 어드벤처 트레일</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/212.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('212','219');"
+                  alt="Fire Blaze: Blue Wizard"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈: 블루 위저드</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/213.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('213','219');"
+                  alt="Fire Blaze: Blue Wizard Megaways"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈: 블루 위저드 메가웨이즈</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/215.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('215','219');"
+                  alt="Fire Blaze: Eternal Lady"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈: 영원한 여인</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/216.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('216','219');"
+                  alt="Fire Blaze: Fire Fighter"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈: 파이어 파이터</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/217.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('217','219');"
+                  alt="Fire Blaze: Golden Macaque"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈: 골든 마카크</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/218.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('218','219');"
+                  alt="Fire Blaze: Green Wizard"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈: 그린 위저드</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/219.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('219','219');"
+                  alt="Fire Blaze: Jinns Moon"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈: 진스 문</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/220.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('220','219');"
+                  alt="Fire Blaze: Pearls Pearls Pearls"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈: 진주 진주 진주</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/221.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('221','219');"
+                  alt="Fire Blaze: Pharaoh's Daughter"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈: 파라오의 딸</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/222.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('222','219');"
+                  alt="Fire Blaze: Red Wizard"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈: 레드 위저드</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/223.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('223','219');"
+                  alt="Fire Blaze: River Empress"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈: 리버 황후</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/224.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('224','219');"
+                  alt="Fire Blaze: Sisters Gift"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈: 자매 선물</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/225.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('225','219');"
+                  alt="Fire Blaze: Sky Queen"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈: 스카이 퀸</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/226.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('226','219');"
+                  alt="Fire Blaze: Toltec Blocks"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈: 톨텍 블록</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/227.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('227','219');"
+                  alt="Fire Blaze: Tsai Shen's Gift"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈: 차이셴의 선물</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/228.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('228','219');"
+                  alt="Fire Blaze: Tundra Wolf"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파이어 블레이즈: 툰드라 울프</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/229.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('229','219');"
+                  alt="Fishin' Bonanza"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">피싱 보난자</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/232.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('232','219');"
+                  alt="Football Rules"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">축구 규칙</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/234.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('234','219');"
+                  alt="Football! Cash Collect"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >축구! 현금 수집</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/235.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('235','219');"
+                  alt="Forest Prince"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >포레스트 프린스</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/237.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('237','219');"
+                  alt="Fortune Day"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">행운의 날</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/238.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('238','219');"
+                  alt="Fortune Fortune: Thundershots"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >포춘 포춘: 썬더샷</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/239.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('239','219');"
+                  alt="Fortune Lions"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">포춘 라이온스</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/240.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('240','219');"
+                  alt="Fortunes of the Fox"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">여우의 행운</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/241.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('241','219');"
+                  alt="Frog's Gift"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">개구리의 선물</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/242.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('242','219');"
+                  alt="Fruity Showers"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">과일 샤워</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/243.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('243','219');"
+                  alt="Full Moon: White Panda"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >보름달: 화이트 팬더</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/244.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('244','219');"
+                  alt="Full Moon: Wild Track"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >보름달: 와일드 트랙</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/246.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('246','219');"
+                  alt="Funky Monkey"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">펑키 몽키</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/248.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('248','219');"
+                  alt="Gaelic Luck"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">게일 행운</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/249.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('249','219');"
+                  alt="Galactic Streak"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >은하계의 줄무늬</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/250.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('250','219');"
+                  alt="Geisha Story"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">게이샤 스토리</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/251.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('251','219');"
+                  alt="Gem Heat"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">젬 히트</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/252.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('252','219');"
+                  alt="Gem Queen"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">젬 퀸</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/255.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('255','219');"
+                  alt="Glorious Guardians"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >영광스러운 수호자들</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/256.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('256','219');"
+                  alt="Gold Hit & Link: JP Bacon & Co"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >골드 히트 & 링크: JP 베이컨 & Co</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/257.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('257','219');"
+                  alt="Gold Hit: Dragon Bonanza"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >골드 히트: 드래곤 보난자</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/258.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('258','219');"
+                  alt="Gold Hit: O'Reilly's Riches"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >골드 히트: 오라일리의 부</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/259.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('259','219');"
+                  alt="Gold Hit: Shrine of Anubis"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >골드 히트: 아누비스 신전</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/260.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('260','219');"
+                  alt="Gold Pile: Orangutan!"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >골드 파일: 오랑우탄!</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/261.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('261','219');"
+                  alt="Gold Pile: Tigers Pride"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >골드 파일: 타이거즈 프라이드</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/262.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('262','219');"
+                  alt="Gold Pile: Toltec Treasure"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >골드 파일: 톨텍 보물</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/265.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('265','219');"
+                  alt="Gold Trio: Sinbad's Riches"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >골드 트리오: 신바드의 부</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/266.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('266','219');"
+                  alt="Golden Tour"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">골든 투어</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/267.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('267','219');"
+                  alt="Grand Junction: Enchanted Inca"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >그랜드 정션: 마법에 걸린 잉카</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/268.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('268','219');"
+                  alt="Grand Junction: Golden Guns"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >그랜드 정션: 골든 건즈</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/269.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('269','219');"
+                  alt="Grand Junction: Mountain Express"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >그랜드 정션: 마운틴 익스프레스</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/270.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('270','219');"
+                  alt="Great Blue"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">그레이트 블루</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/272.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('272','219');"
+                  alt="Hainan Ice"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">하이난 얼음</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/273.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('273','219');"
+                  alt="Halloween Fortune"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">할로윈 포춘</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/274.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('274','219');"
+                  alt="Halloween Fortune 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">할로윈 포춘 2</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/275.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('275','219');"
+                  alt="Halloween Fortune Scratch"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >할로윈 포춘 스크래치</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/276.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('276','219');"
+                  alt="Haunted House"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">유령의 집</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/277.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('277','219');"
+                  alt="Heart of the Frontier"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">국경의 심장</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/278.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('278','219');"
+                  alt="Heavenly Ruler"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">하늘의 통치자</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/279.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('279','219');"
+                  alt="Heroes Arrow"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >히어로즈 애로우</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/280.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('280','219');"
+                  alt="Highway Kings"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">하이웨이 킹스</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/281.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('281','219');"
+                  alt="Hit Bar"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">히트 바</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/283.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('283','219');"
+                  alt="Hit Bar: Gold"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">히트 바: 골드</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/285.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('285','219');"
+                  alt="Hologram Wilds"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >홀로그램 와일드</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/286.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('286','219');"
+                  alt="Honey Gems"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">허니 젬스</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/289.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('289','219');"
+                  alt="Hot Gems Xtreme"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >핫 젬스 익스트림</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/291.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('291','219');"
+                  alt="Hot Gems Xtreme Scratch"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >핫 젬스 익스트림 스크래치</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/292.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('292','219');"
+                  alt="Hot KTV"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">핫 KTV</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/295.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('295','219');"
+                  alt="Irish Luck"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">아이리시 럭</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/298.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('298','219');"
+                  alt="Jane Jones in Book of Kings 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >왕의 책 2의 제인 존스</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/299.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('299','219');"
+                  alt="Jin Qian Wa"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">진첸와</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/301.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('301','219');"
+                  alt="Joker Rush"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">조커 러시</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/303.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('303','219');"
+                  alt="Joker Rush: Cash Collect"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >조커 러시: 캐시 콜렉트</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/304.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('304','219');"
+                  alt="Juego de la oca"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">거위의 게임</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/305.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('305','219');"
+                  alt="Jungle Giants"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">정글 자이언츠</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/306.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('306','219');"
+                  alt="Jurassic Island 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >쥬라기 아일랜드 2</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/319.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('319','219');"
+                  alt="Legacy of the Wild"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">야생의 유산</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/320.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('320','219');"
+                  alt="Legacy of the Wilds 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">야생의 유산 2</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/321.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('321','219');"
+                  alt="Leprechaun's Luck: Cash Collect"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >르프레찬의 행운: 현금 수집</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/322.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('322','219');"
+                  alt="Lie Yan Zuan Shi"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">리옌촨시</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/323.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('323','219');"
+                  alt="Lock & Hit: Red Knight"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >락앤히트: 레드 나이트</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/324.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('324','219');"
+                  alt="Lockdown Loot"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">락다운 전리품</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/325.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('325','219');"
+                  alt="Long Long Long"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">롱 롱 롱</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/326.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('326','219');"
+                  alt="Lotto Madness"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">로또 광란</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/327.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('327','219');"
+                  alt="Lovefool"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">러브풀</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/328.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('328','219');"
+                  alt="Lucky Emeralds"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">럭키 에메랄드</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/329.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('329','219');"
+                  alt="Luminous Life"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">빛나는 생명</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/331.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('331','219');"
+                  alt="Magical Stacks"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">마법의 스택</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/332.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('332','219');"
+                  alt="Maji Wilds"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">마지 와일드</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/333.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('333','219');"
+                  alt="Mayan Blocks"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">마야 블록</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/335.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('335','219');"
+                  alt="Mega Fire Blaze: Big Circus!"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >메가 파이어 블레이즈: 빅 서커스!</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/336.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('336','219');"
+                  alt="Mega Fire Blaze: Emperor of Rome"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >메가 파이어 블레이즈: 로마의 황제</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/337.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('337','219');"
+                  alt="Mega Fire Blaze: Khonsu God of Moon"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >메가 파이어 블레이즈: 콘수 갓 오브 문</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/339.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('339','219');"
+                  alt="Mega Fire Blaze: Legacy of the Tiger"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >메가 파이어 블레이즈: 호랑이의 유산</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/340.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('340','219');"
+                  alt="Mega Fire Blaze: Piggies and the Bank"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >메가 파이어 블레이즈: 돼지와 은행</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/341.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('341','219');"
+                  alt="Mega Fire Blaze: Wild Pistolero"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >메가 파이어 블레이즈: 와일드 피스톨레로</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/342.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('342','219');"
+                  alt="Midnight Wilds"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >미드나잇 와일드</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/343.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('343','219');"
+                  alt="Mighty Hat: Lamp of Gold"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >마이티 모자: 황금의 램프</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/344.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('344','219');"
+                  alt="Mighty Hat: Mine O' Mine"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >마이티 모자: 마이 오 마인</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/345.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('345','219');"
+                  alt="Mighty Hat: Mystic Tales"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >마이티 모자: 미스틱 테일즈</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/346.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('346','219');"
+                  alt="Miss Fortune"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">미스 포춘</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/347.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('347','219');"
+                  alt="Monkey and Rat"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">원숭이와 쥐</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/349.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('349','219');"
+                  alt="Monster Multipliers"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">몬스터 승수</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/350.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('350','219');"
+                  alt="Mr. Cashback"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">캐시백 씨</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/351.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('351','219');"
+                  alt="Murder Mystery"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">살인 미스터리</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/352.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('352','219');"
+                  alt="Neptune's Kingdom"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">해왕성의 왕국</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/353.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('353','219');"
+                  alt="New Year's Bonanza"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">새해 보난자</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/354.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('354','219');"
+                  alt="Ni Shu Shen Me"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">니슈 신미</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/356.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('356','219');"
+                  alt="Ox Riches"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">소의 부</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/358.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('358','219');"
+                  alt="Panda Luck"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">판다 럭</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/359.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('359','219');"
+                  alt="Panther Moon"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">팬서 문</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/360.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('360','219');"
+                  alt="Panther Pays"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">팬서 페이</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/362.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('362','219');"
+                  alt="Penguin Vacation"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">펭귄 바캉스</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/363.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('363','219');"
+                  alt="Pharaoh's Secrets"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">파라오의 비밀</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/365.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('365','219');"
+                  alt="Pigeons From Space!"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >우주에서 온 비둘기들!</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/366.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('366','219');"
+                  alt="Piggies and the Wolf"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">돼지와 늑대</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/368.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('368','219');"
+                  alt="Plunder Ahoy!"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">약탈 아호이!</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/369.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('369','219');"
+                  alt="Power Zones: Ishtar"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파워 존: 이슈타르</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/370.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('370','219');"
+                  alt="Power Zones: Legend of Hydra"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파워 존: 히드라의 전설</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/371.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('371','219');"
+                  alt="Power Zones: Pyramid Valley"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파워 존: 피라미드 밸리</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/372.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('372','219');"
+                  alt="Power Zones: Stallion Strike"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파워 존: 스탤리온 스트라이크</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/373.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('373','219');"
+                  alt="Power Zones: Thunder Birds"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >파워 존: 썬더 버드</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/375.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('375','219');"
+                  alt="Pumpkin Bonanza"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">호박 보난자</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/377.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('377','219');"
+                  alt="Pyramid Linx"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >피라미드 링크스</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/378.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('378','219');"
+                  alt="Qin's Empire: Caishen's Temple"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >진 제국: 카이셴 사원</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/379.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('379','219');"
+                  alt="Qin's Empire: Celestial Guardians"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >진 제국: 천자의 수호자</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/380.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('380','219');"
+                  alt="Queen of the Pyramids: Mega Cash Collect"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >피라미드의 여왕: 메가 캐시 컬렉션</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/381.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('381','219');"
+                  alt="Queen of Wands"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">완즈의 여왕</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/382.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('382','219');"
+                  alt="Quest West"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">퀘스트 웨스트</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/383.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('383','219');"
+                  alt="Ready to Blow: Thundershots"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >불 준비 완료: 썬더샷</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/384.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('384','219');"
+                  alt="Record Riches!"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">기록적인 부!</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/385.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('385','219');"
+                  alt="Retro Rush"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">레트로 러시</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/387.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('387','219');"
+                  alt="Ri Ri Jin Cai"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">리리진 차이</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/389.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('389','219');"
+                  alt="Rich Roll: Lust for Gold!"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >리치 롤: 골드에 대한 욕망!</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/390.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('390','219');"
+                  alt="Rogues Draw"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">로그 드로</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/391.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('391','219');"
+                  alt="Rome and Glory"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">로마와 영광</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/392.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('392','219');"
+                  alt="Royal Respin Deluxe"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >로열 레스핀 디럭스</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/394.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('394','219');"
+                  alt="Sacred Stones"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">성스러운 돌들</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/395.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('395','219');"
+                  alt="Safari Heat"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">사파리 더위</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/396.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('396','219');"
+                  alt="Sahara Riches Cash Collect"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >사하라 부유 현금 모음</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/397.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('397','219');"
+                  alt="Sahara Riches MegaWays: Cash Collect"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >사하라 리치스 메가웨이즈: 캐시 콜렉트</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/398.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('398','219');"
+                  alt="Santa Surprise"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >산타 서프라이즈</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/399.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('399','219');"
+                  alt="Savage Jungle"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">새비지 정글</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/400.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('400','219');"
+                  alt="Secrets of the Amazon"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">아마존의 비밀</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/402.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('402','219');"
+                  alt="Sherlock Mystery"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">셜록 미스터리</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/403.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('403','219');"
+                  alt="Shields of Rome"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">로마의 방패</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/404.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('404','219');"
+                  alt="Si Xiang"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">시샹</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/405.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('405','219');"
+                  alt="Silent Samurai"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >침묵의 사무라이</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/406.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('406','219');"
+                  alt="Silver Bullet"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">실버 불릿</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/407.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('407','219');"
+                  alt="Silver Bullet Bandit: Cash Collect"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >실버 불릿 밴딧: 캐시 콜렉트</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/409.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('409','219');"
+                  alt="Sorcerer's Guild of Magic"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >마법사의 마법 길드</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/411.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('411','219');"
+                  alt="Starmada Exiles"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >스타마다 엑실레스</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/412.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('412','219');"
+                  alt="Stars Ablaze"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">별들의 불꽃</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/413.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('413','219');"
+                  alt="Stars Awakening"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">별의 각성</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/418.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('418','219');"
+                  alt="Thai Paradise"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >타이 파라다이스</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/421.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('421','219');"
+                  alt="The Riches of Don Quixote"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">돈키호테의 부</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/422.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('422','219');"
+                  alt="Tiger Claw"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">호랑이 발톱</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/423.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('423','219');"
+                  alt="Tiger Stacks"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">타이거 스택스</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/424.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('424','219');"
+                  alt="Tiger Turtle Dragon Phoenix"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >호랑이 거북 용 피닉스</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/426.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('426','219');"
+                  alt="Tip Top Totems"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">팁 탑 토템</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/427.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('427','219');"
+                  alt="Toad's Gift"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">두꺼비의 선물</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/428.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('428','219');"
+                  alt="Treasures of the Lamps"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">램프의 보물</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/429.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('429','219');"
+                  alt="Triple Monkey"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">트리플 몽키</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/430.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('430','219');"
+                  alt="Triple Stop: Hercules Rules"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >트리플 스톱: 헤라클레스의 규칙</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/431.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('431','219');"
+                  alt="Triple Stop: Mermaids Find"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >트리플 스톱: 인어 찾기</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/432.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('432','219');"
+                  alt="True Love"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">트루 러브</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/433.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('433','219');"
+                  alt="Ugga Bugga"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">우가 부가</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/434.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('434','219');"
+                  alt="Vacation Station"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">휴가지</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/435.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('435','219');"
+                  alt="Vacation Station Deluxe"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >바캉스 스테이션 디럭스</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/436.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('436','219');"
+                  alt="Vampire Princess of Darkness"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >어둠의 뱀파이어 공주</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/439.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('439','219');"
+                  alt="Ways of the Genie"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">지니의 길</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/440.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('440','219');"
+                  alt="Ways of the Phoenix"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">불사조의 길</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/441.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('441','219');"
+                  alt="Wheels of Flame"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">불꽃의 바퀴</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/442.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('442','219');"
+                  alt="White King"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">백왕</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/443.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('443','219');"
+                  alt="White King II"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">백왕 2세</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/445.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('445','219');"
+                  alt="Wild Lava"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">와일드 라바</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/446.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('446','219');"
+                  alt="Wild Lava Scratch"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">야생 용암 긁힘</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/447.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('447','219');"
+                  alt="Wild LinX"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">와일드 린엑스</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/449.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('449','219');"
+                  alt="Wild West Wilds!"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >와일드 웨스트 와일드!</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/450.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('450','219');"
+                  alt="Witches: Cash Collect"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >마녀들: 캐시 콜렉트</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/451.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('451','219');"
+                  alt="Wolves! Wolves! Wolves!"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >늑대들! 늑대들! 늑대들!</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/452.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('452','219');"
+                  alt="Wu Long"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">우롱</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/454.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('454','219');"
+                  alt="Wushu Punch"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">우슈 펀치</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/456.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('456','219');"
+                  alt="Yu Tu Jin Cai: Cash Collect"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >유투진 차이: 현금 수집</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/457.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('457','219');"
+                  alt="Yun Cong Long"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">윤콩롱</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/458.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('458','219');"
+                  alt="Zhao Cai Jin Bao"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >자오차이 진바오</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/460.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('460','219');"
+                  alt="Zhao Cai Tong Zi"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">조채통쯔</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/461.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('461','219');"
+                  alt="Zodiac Charms"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">조디악 참스</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/607.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('607','219');"
+                  alt="Ten Ton Ways Luck"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >십 톤 웨이즈 럭</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/608.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('608','219');"
+                  alt="Rush Fever Soda Pop"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >러시 피버 소다 팝</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/609.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('609','219');"
+                  alt="Mad Hit Savannah"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >매드 히트 사바나</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/610.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('610','219');"
+                  alt="Wild Roll"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">와일드 롤</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/611.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('611','219');"
+                  alt="Reaction Link"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">반응 링크</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/612.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('612','219');"
+                  alt="Gold Trio: Leprechaun's Luck BF"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >골드 트리오: 레프리콘의 행운 BF</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/613.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('613','219');"
+                  alt="El Ranchero Cash Collect Diamond Path"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >엘란체로 캐시 콜렉트 다이아몬드 패스</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/614.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('614','219');"
+                  alt="Drop for Top"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">상단 드롭</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/627.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('627','219');"
+                  alt="Dragon Bond"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">드래곤 본드</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/628.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('628','219');"
+                  alt="Fat Choy Choy Sun"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">팻 초이 선</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/629.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('629','219');"
+                  alt="Gold Hit: O'Reilly's Charms"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >골드 히트: 오라일리의 매력</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/630.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('630','219');"
+                  alt="Gold Pile: New Years Gold"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >골드 파일: 새해 금</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/631.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('631','219');"
+                  alt="Jinfu Long"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">진푸롱</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/632.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('632','219');"
+                  alt="Jinfu Xingyun"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">진푸 싱윈</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/633.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('633','219');"
+                  alt="Koi Harmony"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">코이 하모니</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/634.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('634','219');"
+                  alt="Kraken Spins"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">크라켄 스핀</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/635.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('635','219');"
+                  alt="Lucky Gift: Cash Collect"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >행운의 선물: 현금 수집</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/636.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('636','219');"
+                  alt="Mega Fire Blaze: 3 Wizards"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >메가 파이어 블레이즈: 3명의 마법사</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/637.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('637','219');"
+                  alt="Silent Samurai: Mega Cash Collect"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >사일런트 사무라이: 메가 캐시 컬렉션</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/638.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('638','219');"
+                  alt="The Great Genie"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">위대한 지니</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/644.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('644','219');"
+                  alt="Gold Hit: Lucky Granny"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >골드 히트: 럭키 할머니</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/645.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('645','219');"
+                  alt="Mega Fire Blaze: Plinko"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >메가 파이어 블레이즈: 플린코</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/648.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('648','219');"
+                  alt="Free the Dragon"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">드래곤 해방</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/651.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('651','219');"
+                  alt="Go High Joker"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">고 하이 조커</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/652.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('652','219');"
+                  alt="Mad Hit Full Steam"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >매드 히트 풀 스팀</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/654.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('654','219');"
+                  alt="Cash It"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">캐시 잇</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/655.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('655','219');"
+                  alt="Cash Plane X5000"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >캐시 플레인 X5000</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/656.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('656','219');"
+                  alt="Cash It Multiplayer"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >캐시 잇 멀티플레이어</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/657.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('657','219');"
+                  alt="Circus Launch"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">서커스 런칭</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/658.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('658','219');"
+                  alt="Kick It Multiplayer"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >킥 잇 멀티플레이어</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/659.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('659','219');"
+                  alt="Streak of Luck: Double Dice"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >행운의 연속: 더블 주사위</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/663.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('663','219');"
+                  alt="81 Joker Hot Reels"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">81 조커 핫 릴</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/664.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('664','219');"
+                  alt="Ocean Frenzy"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">오션 프렌즈</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/665.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('665','219');"
+                  alt="Blue Wizard: Cash Collect & Link"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >블루 위저드: 캐시 컬렉션 & 링크</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/666.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('666','219');"
+                  alt="Stampede Rush Trident"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >스탬피드 러시 트라이던트</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/667.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('667','219');"
+                  alt="Giga Match Bunny"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">기가 매치 버니</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/668.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('668','219');"
+                  alt="Mad Hit Diamonds"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >매드 히트 다이아몬드</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/669.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('669','219');"
+                  alt="Piggy Mania"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">피기 매니아</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/670.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('670','219');"
+                  alt="Mega Fire Blaze: Lucky Bass"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >메가 파이어 블레이즈: 럭키 베이스</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/671.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('671','219');"
+                  alt="Buffalo Blitz: Cash Collect"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >버팔로 블리츠: 캐시 콜렉트</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/672.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('672','219');"
+                  alt="Oink Oink Oink: Pharaohs"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >오잉크 오잉크: 파라오</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/673.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('673','219');"
+                  alt="Lil Demon: Double Heat"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >릴 데몬: 더블 히트</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/674.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('674','219');"
+                  alt="Immortal Ways Gallina Harvest"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >불멸의 길 갈리나 수확</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/675.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('675','219');"
+                  alt="J Mania 3 Buffalo"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >J 매니아 3 버팔로</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/676.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('676','219');"
+                  alt="J Mania Loco Habanero"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >제이 매니아 로코 하바네로</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/680.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('680','219');"
+                  alt="Mystic Mines"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">미스틱 마인즈</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/681.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('681','219');"
+                  alt="Ka Ching Boom"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">카칭붐</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/682.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('682','219');"
+                  alt="Blackbeard’s Hoard Cash Sacks"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >검은 수염의 사재기 현금 자루</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/683.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('683','219');"
+                  alt="Toucan Mania"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">투칸 매니아</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/684.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('684','219');"
+                  alt="Leprechaun's Luck: Cash Collect Megaways"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >르프레찬의 행운: 현금 수집 메가웨이</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/685.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('685','219');"
+                  alt="Macabra Linx"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Macabra Linx</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/686.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('686','219');"
+                  alt="Veils of Venice"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">베니스의 베일</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/687.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('687','219');"
+                  alt="Golden Ways"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">골든 웨이즈</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/689.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('689','219');"
+                  alt="Cash Reveal"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">현금 공개</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/690.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('690','219');"
+                  alt="Sahara Riches: Cash Collect Max"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >사하라 부: 현금 수집 최대치</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/691.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('691','219');"
+                  alt="Wizzy Trix"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">위지 트릭스</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/692.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('692','219');"
+                  alt="The Racaroon"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">라카룬</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/694.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('694','219');"
+                  alt="20 Stars Ablaze"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >20개의 별이 불타오르다</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/695.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('695','219');"
+                  alt="Lil Demon: Blazing Lava"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >릴 데몬: 불타는 용암</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/696.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('696','219');"
+                  alt="Gold Trio: Lil Demon"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >골드 트리오: 릴 데몬</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/706.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('706','219');"
+                  alt="Premium European Roulette"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >프리미엄 유럽 룰렛</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/708.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('708','219');"
+                  alt="Diamond Explosion Christmas Tango"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >다이아몬드 폭발 크리스마스 탱고</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/709.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('709','219');"
+                  alt="New Year Happiness"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">새해 행복</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/710.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('710','219');"
+                  alt="Rush Fever 7s Deluxe"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >러시 피버 7s 디럭스</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playtech/711.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('711','219');"
+                  alt="Zeus Rush Fever Deluxe"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >제우스 러시 피버 디럭스</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--FOOTER -->
+    <footer>
+      <div class="footer-logos">
+        <img src="images/footer-logos.png" alt="Partners" />
+      </div>
+      <div class="footer-nav">
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>ABOUT</h4>
+            <ul>
+              <li><a href="#">보너스</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">메세지 보내기</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>SERVICES</h4>
+            <ul>
+              <li><a href="#">입금</a></li>
+              <li><a href="#">출금</a></li>
+              <li><a href="#">머니이동</a></li>
+              <li><a href="#">프로모션 신청</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>BANKS</h4>
+            <ul>
+              <li>Neteller</li>
+              <li>Moneybookers</li>
+              <li>MasterCard</li>
+              <li>Bitcoin</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END OF FOOTER -->
+    <script src="js/login-register.js"></script>
+    <script src="js/realtime.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/homescripts.js"></script>
+  </body>
+</html>

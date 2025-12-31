@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ASIANCONNECT</title>
+    <link rel="icon" href="images/weblogo.png" type="image/png" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/gamepage.css" />
+  </head>
+
+  <body>
+    <!-- Header Navbar -->
+    <div class="header">
+      <div class="header-inner">
+        <img class="contact" src="Images/contact.png" alt="contact" />
+        <div class="realtime">
+          <span id="date_time"></span>
+          <img src="Images/korea.png" class="korea-active" alt="korea" />
+        </div>
+      </div>
+    </div>
+    <!-- Primary Navbar -->
+    <div class="top-nav">
+      <div class="top-nav-inner">
+        <!-- LEFT -->
+        <div class="nav-left">
+          <div class="nav-logo">
+            <img
+              src="Images/headerlogo.png"
+              alt="Logo"
+              onclick="location.href='index.html'"
+            />
+          </div>
+          <nav class="nav-menu">
+            <a
+              href="deposit.html"
+              class="<?= ($page === 'deposit') ? 'active' : '' ?>"
+              >입금</a
+            >
+            <a
+              href="withdraw.html"
+              class="<?= ($page === 'withdraw') ? 'active' : '' ?>"
+              >출금</a
+            >
+            <a
+              href="transfer.html"
+              class="<?= ($page === 'transfer') ? 'active' : '' ?>"
+              >머니이동</a
+            >
+            <a
+              href="sports.html"
+              class="<?= ($page === 'sports') ? 'active' : '' ?>"
+              >스포츠</a
+            >
+            <a
+              href="casino.html"
+              class="<?= ($page === 'casino') ? 'active' : '' ?>"
+              >카지노</a
+            >
+            <a
+              href="slots.html"
+              class="<?= ($page === 'slots') ? 'active' : '' ?>"
+              >슬롯</a
+            >
+            <a
+              href="bonus.html"
+              class="<?= ($page === 'bonus') ? 'active' : '' ?>"
+              >보너스</a
+            >
+            <a
+              href="customer-service.html"
+              class="<?= ($page === 'customer-service') ? 'active' : '' ?>"
+              >고객센터</a
+            >
+            <a
+              href="streaming.html"
+              class="<?= ($page === 'streaming') ? 'active' : '' ?>"
+              >스트리밍</a
+            >
+          </nav>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="nav-right">
+          <div class="profile">
+            <img src="Images/profile.png" alt="Profile" />
+          </div>
+
+          <div class="auth-box">
+            <a href="#" class="login-link" id="openLogin">로그인 / 회원가입</a>
+            <a href="#" class="buddy-link">Buddy 보너스</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Primary Navbar -->
+
+    <!-- Game Page -->
+    <div class="gamepage-title-wrap">
+      <img src="images/game-title-drtg.png" alt="Game Menu Title" />
+    </div>
+
+    <!-- TAB CONTENT -->
+    <div class="fancy-box">
+      <div class="column-sltmpage">
+        <div class="sltm-games">
+          <div class="row-sltm">
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/dragonball.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('dragonball','19');"
+                  alt="Saiyan Battle"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Saiyan Battle</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/sd.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('dragonball','19');"
+                  alt="Basketball Master"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Basketball Master</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/naruto.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('naruto','19');"
+                  alt="NINJA"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">NINJA</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/sd5.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('sd5','19');"
+                  alt="Basketball Master 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Basketball Master 2</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/onepiece.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('onepiece','19');"
+                  alt="KING OF PIRATE"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">KING OF PIRATE</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/seiya.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('seiya','19');"
+                  alt="Seiya"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Seiya</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/tgow.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('tgow','19');"
+                  alt="Wealthy God Arriving"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Wealthy God Arriving</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/newyear.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('newyear','19');"
+                  alt="Happy New Year"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Happy New Year</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/watermargin.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('watermargin','19');"
+                  alt="Tales Of Wusong"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Tales Of Wusong</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/tlod.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('tlod','19');"
+                  alt="Investiture of Gods"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Investiture of Gods</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/whitesnake.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('whitesnake','19');"
+                  alt="Tales of White Snake"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Tales of White Snake</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/btball5x20.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('btball5x20','19');"
+                  alt="Crazy Basketball"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Crazy Basketball</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/dnp.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('dnp','19');"
+                  alt="DragonPhoenix Prosper"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >DragonPhoenix Prosper</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/xjqy5x9.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('xjqy5x9','19');"
+                  alt="Chinese Paladin"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Chinese Paladin</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/fls.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('fls','19');"
+                  alt="FULUSHOU"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">FULUSHOU</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/fourss.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('fourss','19');"
+                  alt="Four Holy Beast"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Four Holy Beast</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/nightclub5x20.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('nightclub5x20','19');"
+                  alt="Nightclub"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Nightclub</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/casino.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('casino','19');"
+                  alt="3D Slot"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">3D Slot</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/crazy5x243.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('crazy5x243','19');"
+                  alt="Crazy GO GO GO"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Crazy GO GO GO</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/rocknight.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('rocknight','19');"
+                  alt="RocknRoll Night"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >RocknRoll Night</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/bluesea.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('bluesea','19');"
+                  alt="Blue Sea"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Blue Sea</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/klnz5x20.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('klnz5x20','19');"
+                  alt="Happy Farm"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Happy Farm</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/circus.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('circus','19');"
+                  alt="Crazy Circus"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Crazy Circus</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/dash.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('dash','19');"
+                  alt="Four Wheels & Bro"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Four Wheels & Bro</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/sq5x243.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('sq5x243','19');"
+                  alt="4X4 BATTLE"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">4X4 BATTLE</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/bikini.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('bikini','19');"
+                  alt="Bikini Party"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Bikini Party</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/estate5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('estate5x25','19');"
+                  alt="Monopoly"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Monopoly</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/piratetreasure.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('piratetreasure','19');"
+                  alt="Pirate's Treasure"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Pirate's Treasure</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/merryxmas.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('merryxmas','19');"
+                  alt="Merry Xmas"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Merry Xmas</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/foryouth5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('foryouth5x25','19');"
+                  alt="SO YOUNG"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">SO YOUNG</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/sweethouse.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('sweethouse','19');"
+                  alt="Candy House"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Candy House</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/legend5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('legend5x25','19');"
+                  alt="Legend of the King"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Legend of the King</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/rocket6x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('rocket6x25','19');"
+                  alt="Happiness Overflow"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Happiness Overflow</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/hotpot5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('hotpot5x25','19');"
+                  alt="Spicy Hotpot"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Spicy Hotpot</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/opera.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('opera','19');"
+                  alt="Beijing opera"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Beijing opera</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/bigred.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('bigred','19');"
+                  alt="Big Red"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Big Red</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/wrathofthor.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('wrathofthor','19');"
+                  alt="Wrath of Thor"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wrath of Thor</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/guhuozai.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('guhuozai','19');"
+                  alt="Blood Street"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Blood Street</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/boxingarena.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('boxingarena','19');"
+                  alt="Boxing Arena"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Boxing Arena</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/bxgh5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('bxgh5x25','19');"
+                  alt="Eight Immortals"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Eight Immortals</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/camgirl5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('camgirl5x25','19');"
+                  alt="Sexy Camgirl"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Sexy Camgirl</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/egyptian.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('egyptian','19');"
+                  alt="Eye Of Egypt"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Eye Of Egypt</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/hotpotfeast.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('hotpotfeast','19');"
+                  alt="Hotpot Feast"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Hotpot Feast</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/magician.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('magician','19');"
+                  alt="Magician"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Magician</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/greatgatsby.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('greatgatsby','19');"
+                  alt="Great Gatsby"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Great Gatsby</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/armorCrisis5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('armorCrisis5x25','19');"
+                  alt="Armor Crisis"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Armor Crisis</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/galaxywars.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('galaxywars','19');"
+                  alt="Galaxy Wars"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Galaxy Wars</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/easyrider.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('easyrider','19');"
+                  alt="Easy Rider"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Easy Rider</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/bwzq5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('bwzq5x25','19');"
+                  alt="Joust for a spouse"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Joust for a spouse</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/worldCup5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('worldCup5x25','19');"
+                  alt="FIFA World Cup"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">FIFA World Cup</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/goldjade5x50.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('goldjade5x50','19');"
+                  alt="Jin Yu Man Tang"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Jin Yu Man Tang</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/shokudo.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('shokudo','19');"
+                  alt="Shokudo"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Shokudo</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/train.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('train','19');"
+                  alt="Treasure Hunt Trip"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Treasure Hunt Trip</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/oceanpark5x50.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('oceanpark5x50','19');"
+                  alt="Ocean Park"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Ocean Park</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/lovefighters.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('lovefighters','19');"
+                  alt="Love Fighters"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Love Fighters</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/genie.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('genie','19');"
+                  alt="Aladdin's Wish"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Aladdin's Wish</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/garden.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('garden','19');"
+                  alt="Little Big Garden"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Little Big Garden</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/legendary.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('legendary','19');"
+                  alt="Legendary Tales"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Legendary Tales</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/superstar5x50.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('superstar5x50','19');"
+                  alt="Star Generation"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Star Generation</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/alchemist.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('alchemist','19');"
+                  alt="Crazy Alchemist"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Crazy Alchemist</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/dinosaur5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('dinosaur5x25','19');"
+                  alt="Dinosaur World"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Dinosaur World</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/hiphop5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('hiphop5x25','19');"
+                  alt="Street Dance of China"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Street Dance of China</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/shopping5x243.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('shopping5x243','19');"
+                  alt="National Carnival"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >National Carnival</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/tombshadow.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('tombshadow','19');"
+                  alt="Tomb Shadow"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Tomb Shadow</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/clash.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('clash','19');"
+                  alt="Clash of Three kingdoms"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Clash of Three kingdoms</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/cheekyemojis.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('cheekyemojis','19');"
+                  alt="Cheeky Emojis"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Cheeky Emojis</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/icefire.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('icefire','19');"
+                  alt="Ice And Fire"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Ice And Fire</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/legendMir5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('legendMir5x25','19');"
+                  alt="Legendary Hegemony"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Legendary Hegemony</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/whackamole.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('whackamole','19');"
+                  alt="Whack-A-Mole"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Whack-A-Mole</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/onenight5x243.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('onenight5x243','19');"
+                  alt="Truffle Butter"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Truffle Butter</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/magicbean.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('magicbean','19');"
+                  alt="Magic Bean Legend"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Magic Bean Legend</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/newyear5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('newyear5x25','19');"
+                  alt="Happy Piggy New Year"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Happy Piggy New Year</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/xiaoxiaole7x50.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('xiaoxiaole7x50','19');"
+                  alt="Monster Pop"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Monster Pop</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/fortuneNewYear5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('fortuneNewYear5x25','19');"
+                  alt="MAHJONG KING"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">MAHJONG KING</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/casinomagnates.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('casinomagnates','19');"
+                  alt="Casino Tycoon"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Casino Tycoon</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/secretdate.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('secretdate','19');"
+                  alt="Secret Date"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Secret Date</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/king5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('king5x25','19');"
+                  alt="IM King"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">IM King</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/bacteria.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('bacteria','19');"
+                  alt="Germ Lab"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Germ Lab</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/cute5x50.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('cute5x50','19');"
+                  alt="Castle Guardian"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Castle Guardian</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/baseball.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('baseball','19');"
+                  alt="Baseball Frenzy"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Baseball Frenzy</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/streetdance5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('streetdance5x25','19');"
+                  alt="Street Dance Show"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Street Dance Show</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/museum.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('museum','19');"
+                  alt="Mystic Museum"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Mystic Museum</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/mysticalstones.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('mysticalstones','19');"
+                  alt="Mystical Stones"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Mystical Stones</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/sincity.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('sincity','19');"
+                  alt="Sin City"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Sin City</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/wheel.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('wheel','19');"
+                  alt="Secrets of the Pentagram"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Secrets of the Pentagram</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/lnd5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('lnd5x25','19');"
+                  alt="Who Is Daddy"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Who Is Daddy</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/westwild.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('westwild','19');"
+                  alt="West Wild"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">West Wild</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/halloween.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('halloween','19');"
+                  alt="Witch Winnings"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Witch Winnings</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/bloodmoon.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('bloodmoon','19');"
+                  alt="Blood Wolf legend"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Blood Wolf legend</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/wildchaser5x20.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('wildchaser5x20','19');"
+                  alt="Battle Field"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Battle Field</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/dragonball2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('dragonball2','19');"
+                  alt="Heroes of the East"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Heroes of the East</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/sgkill5x20.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('sgkill5x20','19');"
+                  alt="Three Kingdoms"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Three Kingdoms</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/candycrush.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('candycrush','19');"
+                  alt="Candy Kingdom"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Candy Kingdom</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/pirate5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('pirate5x25','19');"
+                  alt="Captain's Treasure"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Captain's Treasure</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/muaythai.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('muaythai','19');"
+                  alt="Muaythai"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Muaythai</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/sailor.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('sailor','19');"
+                  alt="Sailor Princess"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Sailor Princess</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/nightclub.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('nightclub','19');"
+                  alt="Infinity Club"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Infinity Club</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/nezha.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('nezha','19');"
+                  alt="Nezha Legend"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Nezha Legend</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/wanderingEarth5x243.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('wanderingEarth5x243','19');"
+                  alt="Wandering Planet"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Wandering Planet</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/bird.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('bird','19');"
+                  alt="Bird Island"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Bird Island</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/chess.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('chess','19');"
+                  alt="Dragon Auto Chess"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Dragon Auto Chess</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/honor.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('honor','19');"
+                  alt="Field Of Honor"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Field Of Honor</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/rocknight2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('rocknight2','19');"
+                  alt="Rock Night2-SCORCHIN'777"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Rock Night2-SCORCHIN'777</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/train2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('train2','19');"
+                  alt="Treasure Hunt Trip 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Treasure Hunt Trip 2</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/goldrat5x243.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('goldrat5x243','19');"
+                  alt="Golden Rat"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Golden Rat</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/girlgroup5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('girlgroup5x25','19');"
+                  alt="Sexy Girls"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Sexy Girls</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/boss5x20.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('boss5x20','19');"
+                  alt="Rich Asians"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Rich Asians</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/vikings.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('vikings','19');"
+                  alt="Nordic Saga"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Nordic Saga</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/treasures.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('treasures','19');"
+                  alt="Secret Treasures"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Secret Treasures</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/shiningstars.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('shiningstars','19');"
+                  alt="ShiningStars"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">ShiningStars</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/tgow2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('tgow2','19');"
+                  alt="Cai Shen Dao"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Cai Shen Dao</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/tgow2plus.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('tgow2plus','19');"
+                  alt="CaiShenDaoPLUS"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">CaiShenDaoPLUS</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/peeping.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('peeping','19');"
+                  alt="peeping"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">peeping</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/ds5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('ds5x25','19');"
+                  alt="Drawing Sword"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Drawing Sword</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/empire5x40.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('empire5x40','19');"
+                  alt="The Magic Blade"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >The Magic Blade</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/luckyfortune5x50.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('luckyfortune5x50','19');"
+                  alt="Lucky Fortune"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Lucky Fortune</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/maidhotel5x25.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('maidhotel5x25','19');"
+                  alt="Maid Hotel"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Maid Hotel</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/secretary3x9.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('secretary3x9','19');"
+                  alt="Sexy Secretary"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Sexy Secretary</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/hawaii5x20.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('hawaii5x20','19');"
+                  alt="Hawaii Vacation"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Hawaii Vacation</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/dreamtech/billiards5x243.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('billiards5x243','19');"
+                  alt="POOL EIGHT BALL"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >POOL EIGHT BALL</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--FOOTER -->
+    <footer>
+      <div class="footer-logos">
+        <img src="images/footer-logos.png" alt="Partners" />
+      </div>
+      <div class="footer-nav">
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>ABOUT</h4>
+            <ul>
+              <li><a href="#">보너스</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">메세지 보내기</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>SERVICES</h4>
+            <ul>
+              <li><a href="#">입금</a></li>
+              <li><a href="#">출금</a></li>
+              <li><a href="#">머니이동</a></li>
+              <li><a href="#">프로모션 신청</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>BANKS</h4>
+            <ul>
+              <li>Neteller</li>
+              <li>Moneybookers</li>
+              <li>MasterCard</li>
+              <li>Bitcoin</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END OF FOOTER -->
+
+    <script src="js/realtime.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/homescripts.js"></script>
+  </body>
+</html>

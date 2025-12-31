@@ -1,0 +1,228 @@
+.gamepage-title-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding-top: 10px;
+}
+
+.fancy-box {
+  --border: clamp(2px, 0.2vw, 4px);
+  --cut: clamp(14px, 3vw, 24px);
+
+  position: relative;
+  width: 70%;
+  height: 900px;         
+  margin: 0 auto;
+  background: #fffdf9;
+  margin-bottom: 80px;
+  padding: 30px;
+    
+  /* Cut corners */
+  clip-path: polygon(
+    var(--cut) 0,
+    calc(100% - var(--cut)) 0,
+    100% var(--cut),
+    100% calc(100% - var(--cut)),
+    calc(100% - var(--cut)) 100%,
+    var(--cut) 100%,
+    0 calc(100% - var(--cut)),
+    0 var(--cut)
+  );
+}
+
+/* GOLD BORDER — animated full-rectangle gradient */
+.fancy-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  /* full-rectangle gold gradient */
+  background: linear-gradient(
+    90deg,
+    #d0b291,
+    #ead2b8,
+    #fff3dc,
+    #ead2b8,
+    #d0b291
+  );
+  background-size: 300% 300%;
+  animation: gold-flow 6s linear infinite;
+
+  clip-path: polygon(
+    calc(var(--cut) - var(--border)) -var(--border),
+    calc(100% - var(--cut) + var(--border)) -var(--border),
+    calc(100% + var(--border)) calc(var(--cut) - var(--border)),
+    calc(100% + var(--border)) calc(100% - var(--cut) + var(--border)),
+    calc(100% - var(--cut) + var(--border)) calc(100% + var(--border)),
+    calc(var(--cut) - var(--border)) calc(100% + var(--border)),
+    -var(--border) calc(100% - var(--cut) + var(--border)),
+    -var(--border) calc(var(--cut) - var(--border))
+  );
+}
+
+/* WHITE CENTER MASK */
+.fancy-box::after {
+  content: "";
+  position: absolute;
+  inset: var(--border);
+  z-index: -1;
+
+  background: #fffdf9;
+
+  clip-path: polygon(
+    var(--cut) 0,
+    calc(100% - var(--cut)) 0,
+    100% var(--cut),
+    100% calc(100% - var(--cut)),
+    calc(100% - var(--cut)) 100%,
+    var(--cut) 100%,
+    0 calc(100% - var(--cut)),
+    0 var(--cut)
+  );
+}
+
+/* ANIMATION */
+@keyframes gold-flow {
+  0%   { background-position:   0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+
+/* == GAMES == */
+.column-sltmpage {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 5px;
+    padding-bottom: 68px;                                           
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.column-sltmpage::-webkit-scrollbar {
+    width: 8px;
+}
+
+.column-sltmpage::-webkit-scrollbar-track {
+    background: rgba(213, 143, 74, 0.15);
+    border-radius: 10px;
+}
+
+.column-sltmpage::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        180deg,
+        #ead2b8,
+        #d58f4a,
+        #c47a34
+    );
+    border-radius: 10px;
+}
+
+.column-sltmpage::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+        180deg,
+        #f1ddc2,
+        #d58f4a,
+        #b96c2a
+    );
+}
+/* Firefox */
+.column-sltmpage { 
+    scrollbar-width: thin;
+    scrollbar-color: #d58f4a rgba(213, 143, 74, 0.15);
+}
+
+/*******************************/
+.sltm-games{
+    float: left;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8px;
+}
+/* Clear floats after the columns */
+.row-sltm:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Create five equal columns that floats next to each other */
+.column-sltm {
+    float: left;
+    width: 20%;
+    height: auto;
+    text-align: center;
+    padding-top: 8px;
+    position: relative;
+}
+.slotgames-img {
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
+    cursor: pointer;
+}
+.game-title-slotpage {
+    color: #d58f4a;
+    font-weight: bold;
+    position: relative;
+    display: block;
+    margin: auto;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.zoom-hover {
+    overflow: hidden;        /* prevents image from spilling outside */
+    display: inline-block;
+    border-radius: 6px;      /* optional */
+    border: 1px solid #d58f4a;   /* keeps layout stable */
+    transition: border 0.35s ease, box-shadow 0.35s ease;
+}
+
+.zoom-hover img {
+    transition: transform 0.3s ease;   /* smooth animation */
+}
+.zoom-hover:hover {
+    border: 1px solid #d58f4a;
+    box-shadow: 0 0 10px rgba(213, 143, 74, 0.85),
+                0 0 22px rgba(213, 143, 74, 0.55);
+}
+.zoom-hover img:hover {
+    transform: scale(1.07);  /* slight zoom */
+}
+
+
+/* responsive breakpoints */
+@media (max-width: 1200px) {
+  .column-sltm {
+    flex: 0 0 calc(25% - 20px); /* 4 per row */
+    max-width: calc(25% - 20px);
+  }
+}
+
+@media (max-width: 900px) {
+  .column-sltm {
+    flex: 0 0 calc(33.333% - 20px); /* 3 per row */
+    max-width: calc(33.333% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .column-sltm {
+    flex: 0 0 calc(50% - 20px); /* 2 per row */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 400px) {
+  .column-sltm {
+    flex: 0 0 100%; /* 1 per row */
+    max-width: 100%;
+  }
+}

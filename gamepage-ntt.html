@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ASIANCONNECT</title>
+    <link rel="icon" href="images/weblogo.png" type="image/png" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/gamepage.css" />
+  </head>
+
+  <body>
+    <!-- Header Navbar -->
+    <div class="header">
+      <div class="header-inner">
+        <img class="contact" src="Images/contact.png" alt="contact" />
+        <div class="realtime">
+          <span id="date_time"></span>
+          <img src="Images/korea.png" class="korea-active" alt="korea" />
+        </div>
+      </div>
+    </div>
+    <!-- Primary Navbar -->
+    <div class="top-nav">
+      <div class="top-nav-inner">
+        <!-- LEFT -->
+        <div class="nav-left">
+          <div class="nav-logo">
+            <img
+              src="Images/headerlogo.png"
+              alt="Logo"
+              onclick="location.href='index.html'"
+            />
+          </div>
+          <nav class="nav-menu">
+            <a
+              href="deposit.html"
+              class="<?= ($page === 'deposit') ? 'active' : '' ?>"
+              >입금</a
+            >
+            <a
+              href="withdraw.html"
+              class="<?= ($page === 'withdraw') ? 'active' : '' ?>"
+              >출금</a
+            >
+            <a
+              href="transfer.html"
+              class="<?= ($page === 'transfer') ? 'active' : '' ?>"
+              >머니이동</a
+            >
+            <a
+              href="sports.html"
+              class="<?= ($page === 'sports') ? 'active' : '' ?>"
+              >스포츠</a
+            >
+            <a
+              href="casino.html"
+              class="<?= ($page === 'casino') ? 'active' : '' ?>"
+              >카지노</a
+            >
+            <a
+              href="slots.html"
+              class="<?= ($page === 'slots') ? 'active' : '' ?>"
+              >슬롯</a
+            >
+            <a
+              href="bonus.html"
+              class="<?= ($page === 'bonus') ? 'active' : '' ?>"
+              >보너스</a
+            >
+            <a
+              href="customer-service.html"
+              class="<?= ($page === 'customer-service') ? 'active' : '' ?>"
+              >고객센터</a
+            >
+            <a
+              href="streaming.html"
+              class="<?= ($page === 'streaming') ? 'active' : '' ?>"
+              >스트리밍</a
+            >
+          </nav>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="nav-right">
+          <div class="profile">
+            <img src="Images/profile.png" alt="Profile" />
+          </div>
+
+          <div class="auth-box">
+            <a href="#" class="login-link" id="openLogin">로그인 / 회원가입</a>
+            <a href="#" class="buddy-link">Buddy 보너스</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Primary Navbar -->
+
+    <!-- Game Page -->
+    <div class="gamepage-title-wrap">
+      <img src="images/game-title-ntt.png" alt="Game Menu Title" />
+    </div>
+
+    <!-- TAB CONTENT -->
+    <div class="fancy-box">
+      <div class="column-sltmpage">
+        <div class="sltm-games">
+          <div class="row-sltm">
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_LockAndPop.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9705','18');"
+                  alt="Lock and Pop"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Lock and Pop</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_JungleSpiritMegaways.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9683','18');"
+                  alt="Jungle Spirit Megaways"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Jungle Spirit Megaways</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_PandorasTreasure.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9684','18');"
+                  alt="Pandora’s Treasure™"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Pandora’s Treasure™</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_GoldenRealms.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9665','18');"
+                  alt="Golden Realms"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Golden Realms</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_LeprechaunJoy.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9666','18');"
+                  alt="Leprechaun Joy™"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Leprechaun Joy™</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_GoldenWheelsOfEgypt.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9667','18');"
+                  alt="Golden Wheels of Egypt"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Golden Wheels of Egypt</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_RainforestGold.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9668','18');"
+                  alt="Rainforest Gold™"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Rainforest Gold™</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_CursedTreasure.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9634','18');"
+                  alt="Cursed treasure"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Cursed treasure</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_MagicLab.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9635','18');"
+                  alt="Magic lab"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Magic lab</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_JackHammer3DiamondAffair.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9614','18');"
+                  alt="Jack Hammer 3: Diamond Affair"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Jack Hammer 3: Diamond Affair</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_GoodOld7s.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9615','18');"
+                  alt="Good Old 7’s"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Good Old 7’s</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_Rage.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9616','18');"
+                  alt="Rage"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Rage</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_BuckshotWilds.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9592','18');"
+                  alt="Buckshot Wilds"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Buckshot Wilds</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_PiratesParty.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9551','18');"
+                  alt="Pirates Party™"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Pirates Party™</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_JellyBellyMegaways.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9552','18');"
+                  alt="Jelly Belly™ MegaWays™"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Jelly Belly™ MegaWays™</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_GemCrush.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9495','18');"
+                  alt="Gem Crush™"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Gem Crush™</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_JingleBellsBonanza.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9496','18');"
+                  alt="Jingle Bells Bonanza™"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Jingle Bells Bonanza™</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_LightsCameraCash.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9447','18');"
+                  alt="Lights, Camera, Cash!™"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Lights, Camera, Cash!™</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_LostRelics2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9349','18');"
+                  alt="Lost Relics 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Lost Relics 2</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_ThrillToGrill.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9387','18');"
+                  alt="Thrill To Grill"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Thrill To Grill</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_DruidsMagic.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9388','18');"
+                  alt="Druid’s Magic"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Druid’s Magic</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_ElkHunter.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9396','18');"
+                  alt="Elk Hunter"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Elk Hunter</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_DontEatTheCandy.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9424','18');"
+                  alt="Don’t Eat the Candy™"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Don’t Eat the Candy™</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_FinnAndTheCandySpin.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9425','18');"
+                  alt="Finn and the Candy Spin"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Finn and the Candy Spin</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_BeachInvaders.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9350','18');"
+                  alt="Beach Invaders"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Beach Invaders</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_FruitShopFrenzy.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9329','18');"
+                  alt="Fruit Shop Frenzy"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Fruit Shop Frenzy</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_WildTurkeyMegaways.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9106','18');"
+                  alt="Wild Turkey™ MegaWays™"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Wild Turkey™ MegaWays™</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_TheWishMasterMegaways.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9073','18');"
+                  alt="The Wish Master™ MegaWays™"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >The Wish Master™ MegaWays™</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_BigBangBoom.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9312','18');"
+                  alt="Big Bang Boom"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Big Bang Boom</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_101Candies.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9300','18');"
+                  alt="101 Candies"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">101 Candies</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_CrabTrap.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9301','18');"
+                  alt="Crab Trap"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Crab Trap</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_JackAndTheBeanstalkRemastered.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9116','18');"
+                  alt="Jack and the Beanstalk Remastered"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Jack and the Beanstalk Remastered</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_TacoFuryXXXtreme.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9107','18');"
+                  alt="Taco Fury XXXtreme"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Taco Fury XXXtreme</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_TwinSpinXXXtreme.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9108','18');"
+                  alt="Twin Spin XXXtreme"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Twin Spin XXXtreme</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_BustersBones.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8918','18');"
+                  alt="Buster's Bones™"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Buster's Bones™</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_LetItBurn.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8874','18');"
+                  alt="Let It Burn"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Let It Burn</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_MilkshakeXXXtreme.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8827','18');"
+                  alt="Milkshake™ XXXtreme"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Milkshake™ XXXtreme</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_WondersOfChristmas.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8701','18');"
+                  alt="Wonders of Christmas"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Wonders of Christmas</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_Cupcakes.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8703','18');"
+                  alt="Cupcakes"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Cupcakes</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_Superstars.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8620','18');"
+                  alt="Superstars"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Superstars</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_Cornelius.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8560','18');"
+                  alt="Cornelius"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Cornelius</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_BeeHiveBonanza.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8521','18');"
+                  alt="Bee Hive Bonanza"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Bee Hive Bonanza</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_SpaceWars2Powerpoints.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8409','18');"
+                  alt="Space Wars 2 Powerpoints"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Space Wars 2 Powerpoints</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_FunkMaster.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8366','18');"
+                  alt="Funk Master"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Funk Master</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_BlackjackClassic.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8276','18');"
+                  alt="Blackjack Classic"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Blackjack Classic</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_JackHammer2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4163','18');"
+                  alt="Jack Hammer 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Jack Hammer 2</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_SilverbackGold.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7951','18');"
+                  alt="Silverback Gold"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Silverback Gold</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_WildWildWestTheGreatTrainHeist.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4254','18');"
+                  alt="Wild Wild West: The Great Train Heist"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Wild Wild West: The Great Train Heist</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_TheLegendOfShangriLaClusterPays.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4157','18');"
+                  alt="The Legend of Shangri-La: Cluster Pays"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >The Legend of Shangri-La: Cluster Pays</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_NeonStaxx.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4213','18');"
+                  alt="Neon Staxx"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Neon Staxx</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_AmericanRoulette.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7770','18');"
+                  alt="American Roulette"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >American Roulette</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_Baccarat.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7771','18');"
+                  alt="Baccarat"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Baccarat</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_EuropeanRoulette.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7772','18');"
+                  alt="European Roulette"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >European Roulette</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_FrenchRoulette.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7773','18');"
+                  alt="French Roulette"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >French Roulette</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_JungleSpiritCallOfTheWild.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7778','18');"
+                  alt="Jungle Spirit: Call of the Wild"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Jungle Spirit: Call of the Wild</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_ReefRaider.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7099','18');"
+                  alt="Reef Raider"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Reef Raider</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_StarburstXXXtreme.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6987','18');"
+                  alt="Starburst XXXtreme"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Starburst XXXtreme</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_CodexOfFortune.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6974','18');"
+                  alt="Codex of Fortune"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Codex of Fortune</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_DazzleMeMegaways.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6925','18');"
+                  alt="Dazzle Me Megaways"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Dazzle Me Megaways</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_ParthenonQuestForImmortality.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6926','18');"
+                  alt="Parthenon: Quest for Immortality"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Parthenon: Quest for Immortality</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_RomeTheGoldenAge.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6287','18');"
+                  alt="Rome: The Golden Age"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Rome: The Golden Age</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_FruitShopMegaways.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6286','18');"
+                  alt="Fruit Shop Megaways"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Fruit Shop Megaways</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_RichesOfMidgardLandAndExpand.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6236','18');"
+                  alt="Riches of Midgard: Land and Expand"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Riches of Midgard: Land and Expand</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_AlohaChristmas.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6232','18');"
+                  alt="Aloha! Christmas"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Aloha! Christmas</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_DivineFortuneMegaways.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6203','18');"
+                  alt="Divine Fortune Megaways"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Divine Fortune Megaways</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_TwinSpinMegaways.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6167','18');"
+                  alt="Twin Spin Megaways"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Twin Spin Megaways</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_DeadOrAlive2FB.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6161','18');"
+                  alt="Dead or Alive 2 Feature Buy"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Dead or Alive 2 Feature Buy</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_DarkKingForbiddenRiches.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6087','18');"
+                  alt="Dark King: Forbidden Riches"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Dark King: Forbidden Riches</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_RageOfTheSeas.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5937','18');"
+                  alt="Rage of the Seas"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Rage of the Seas</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_DiscoDanny.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5922','18');"
+                  alt="Disco Danny"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Disco Danny</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_Hotline2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5710','18');"
+                  alt="Hotline 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Hotline 2</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_IrishPotLuck.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5711','18');"
+                  alt="Irish Pot Luck"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Irish Pot Luck</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_WillysHotChillies.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5640','18');"
+                  alt="Willy's Hot Chillies"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Willy's Hot Chillies</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_CashNoire.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5605','18');"
+                  alt="Cash Noire"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Cash Noire</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_Trollpot5000.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5536','18');"
+                  alt="Trollpot 5000"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Trollpot 5000</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_GodsOfGoldInfiniReels.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5496','18');"
+                  alt="Gods Of Gold: InfiniReels"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Gods Of Gold: InfiniReels</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_SuperStriker.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5476','18');"
+                  alt="Super Striker"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Super Striker</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_DruidsDream.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5451','18');"
+                  alt="Druids' Dream"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Druids' Dream</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_OceansTreasure.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5369','18');"
+                  alt="Ocean's Treasure"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Ocean's Treasure</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_RiseOfMaya.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5370','18');"
+                  alt="Rise of Maya"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Rise of Maya</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_SerengetiKings.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5327','18');"
+                  alt="Serengeti Kings"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Serengeti Kings</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_ButterflyStaxx2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5199','18');"
+                  alt="Butterfly Staxx 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Butterfly Staxx 2</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_FinnsGoldenTavern.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5205','18');"
+                  alt="Finn's Golden Tavern"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Finn's Golden Tavern</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_GrandSpinn.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5198','18');"
+                  alt="Grand Spinn"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Grand Spinn</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_MagicMaidCafe.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5190','18');"
+                  alt="Magic Maid Cafe"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Magic Maid Cafe</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_TheWolfsBane.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5192','18');"
+                  alt="The Wolf's Bane"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >The Wolf's Bane</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_WingsOfRiches.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5204','18');"
+                  alt="Wings of Riches"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Wings of Riches</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_AlohaClusterPays.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4172','18');"
+                  alt="Aloha! Cluster Pays"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Aloha! Cluster Pays</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_AsgardianStones.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4141','18');"
+                  alt="Asgardian Stones"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Asgardian Stones</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_BloodSuckers.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4184','18');"
+                  alt="Blood Suckers"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Blood Suckers</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_BloodSuckers2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4151','18');"
+                  alt="Blood Suckers 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Blood Suckers 2</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_ButterflyStaxx.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4165','18');"
+                  alt="Butterfly Staxx"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Butterfly Staxx</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_CashOMatic.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4281','18');"
+                  alt="Cash-o-Matic"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Cash-o-Matic</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_DazzleMe.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4187','18');"
+                  alt="Dazzle Me"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Dazzle Me</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_DeadOrAlive.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4188','18');"
+                  alt="Dead or Alive"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Dead or Alive</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_DeadOrAlive2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4116','18');"
+                  alt="Dead or Alive 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Dead or Alive 2</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_DoubleStacks.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4130','18');"
+                  alt="Double Stacks"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Double Stacks</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_DriveMultiplierMayhem.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4194','18');"
+                  alt="Drive: Multiplier Mayhem"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Drive: Multiplier Mayhem</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_EggOMatic.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4143','18');"
+                  alt="EggOMatic"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">EggOMatic</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_ElementsTheAwakening.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4160','18');"
+                  alt="Elements: The Awakening"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Elements: The Awakening</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_Excalibur.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4149','18');"
+                  alt="Excalibur"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Excalibur</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_FairytaleLegendsMirrorMirror.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4135','18');"
+                  alt="Fairytale Legends: Mirror Mirror"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Fairytale Legends: Mirror Mirror</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_FairytaleLegendsRedRidingHood.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4196','18');"
+                  alt="Fairytale Legends: Red Riding Hood"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Fairytale Legends: Red Riding Hood</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_FinnAndTheSwirlySpin.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4150','18');"
+                  alt="Finn and the Swirly Spin"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Finn and the Swirly Spin</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_Flowers.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4199','18');"
+                  alt="Flowers"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Flowers</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_FootballChampionsCup.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4200','18');"
+                  alt="Football: Champions Cup"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Football: Champions Cup</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_FruitShop.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4202','18');"
+                  alt="Fruit Shop"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Fruit Shop</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_FruitShopChristmasEdition.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4201','18');"
+                  alt="Fruit Shop Christmas Edition"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Fruit Shop Christmas Edition</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_FruitSpin.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4142','18');"
+                  alt="Fruit Spin"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Fruit Spin</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_GonzosQuest.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4205','18');"
+                  alt="Gonzo's Quest"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Gonzo's Quest</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_HalloweenJack.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4122','18');"
+                  alt="Halloween Jack"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Halloween Jack</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_Hotline.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4140','18');"
+                  alt="Hotline"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Hotline</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_JackAndTheBeanstalk.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4152','18');"
+                  alt="Jack and the Beanstalk"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Jack and the Beanstalk</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_JackHammer.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4207','18');"
+                  alt="Jack Hammer"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Jack Hammer</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_JokerPro.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4170','18');"
+                  alt="Joker Pro"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Joker Pro</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_KingOfSlots.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4127','18');"
+                  alt="King of Slots"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">King of Slots</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_KoiPrincess.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4208','18');"
+                  alt="Koi Princess"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Koi Princess</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_Lights.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4153','18');"
+                  alt="Lights"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Lights</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_LostRelics.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4138','18');"
+                  alt="Lost Relics"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Lost Relics</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_MythicMaiden.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4212','18');"
+                  alt="Mythic Maiden"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Mythic Maiden</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_PiggyRiches.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4216','18');"
+                  alt="Piggy Riches"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Piggy Riches</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_PyramidQuestForImmortality.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4222','18');"
+                  alt="Pyramid: Quest for Immortality"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Pyramid: Quest for Immortality</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_ReelRush.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4223','18');"
+                  alt="Reel Rush"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Reel Rush</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_ReelSteal.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4128','18');"
+                  alt="Reel Steal"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Reel Steal</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_ScruffyDuck.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4167','18');"
+                  alt="Scruffy Duck"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Scruffy Duck</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_SecretOfTheStones.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4158','18');"
+                  alt="Secret of the Stones"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Secret of the Stones</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_SecretsOfAtlantis.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4229','18');"
+                  alt="Secrets of Atlantis"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Secrets of Atlantis</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_SecretsOfChristmas.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4230','18');"
+                  alt="Secrets of Christmas"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Secrets of Christmas</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_SpaceWars.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4145','18');"
+                  alt="Space Wars"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Space Wars</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_SpinataGrande.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4236','18');"
+                  alt="Spinata Grande"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Spinata Grande</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_Starburst.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4237','18');"
+                  alt="Starburst"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Starburst</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_SteamTower.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4159','18');"
+                  alt="Steam Tower"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Steam Tower</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_SweetyHoneyFruity.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4284','18');"
+                  alt="Sweety Honey Fruity"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Sweety Honey Fruity</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_TurnYourFortune.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4124','18');"
+                  alt="Turn Your Fortune"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Turn Your Fortune</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_TwinSpin.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4247','18');"
+                  alt="Twin Spin"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Twin Spin</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_Victorious.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4250','18');"
+                  alt="Victorious"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Victorious</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_WarlordsCrystalsOfPower.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4251','18');"
+                  alt="Warlords: Crystals of Power"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Warlords: Crystals of Power</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_WildBazaar.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4125','18');"
+                  alt="Wild Bazaar"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wild Bazaar</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_WildWater.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4161','18');"
+                  alt="Wild Water"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wild Water</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_WildWorlds.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4120','18');"
+                  alt="Wild Worlds"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wild Worlds</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/netent/NE_WolfCub.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('4166','18');"
+                  alt="Wolf Cub"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wolf Cub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--FOOTER -->
+    <footer>
+      <div class="footer-logos">
+        <img src="images/footer-logos.png" alt="Partners" />
+      </div>
+      <div class="footer-nav">
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>ABOUT</h4>
+            <ul>
+              <li><a href="#">보너스</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">메세지 보내기</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>SERVICES</h4>
+            <ul>
+              <li><a href="#">입금</a></li>
+              <li><a href="#">출금</a></li>
+              <li><a href="#">머니이동</a></li>
+              <li><a href="#">프로모션 신청</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>BANKS</h4>
+            <ul>
+              <li>Neteller</li>
+              <li>Moneybookers</li>
+              <li>MasterCard</li>
+              <li>Bitcoin</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END OF FOOTER -->
+
+    <script src="js/realtime.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/homescripts.js"></script>
+  </body>
+</html>

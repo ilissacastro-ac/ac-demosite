@@ -1,0 +1,513 @@
+.transactions-title-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  padding-top: 10px;
+}
+/* Transactions Menu Title Wrap */
+.transactions-menu-title-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  padding-top: 30px;
+}
+
+.transactions-menu-title-wrap img {
+  width: 800px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Transactions Tabs Container */
+.transactions-tabs {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+/* Transactions Tab Buttons */
+.transactions-tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 20px;
+}
+
+/* Transactions Tab Button Images */
+.transactions-tab-btn {
+  width: 130px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.transactions-tab-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.transactions-tab-btn.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.fancy-box {
+  --border: clamp(2px, 0.2vw, 4px);
+  --cut: clamp(14px, 3vw, 24px);
+
+  position: relative;
+
+  /* RESPONSIVE WIDTH */
+  width: 100%;
+  max-width: 900px; /* desktop width control */
+  margin: 0 auto 80px;
+
+  /* MOBILE SIDE SPACING */
+  padding: 30px;
+  box-sizing: border-box;
+
+  height: 560px;
+  background: #fffdf9;
+
+  /* Cut corners */
+  clip-path: polygon(
+    var(--cut) 0,
+    calc(100% - var(--cut)) 0,
+    100% var(--cut),
+    100% calc(100% - var(--cut)),
+    calc(100% - var(--cut)) 100%,
+    var(--cut) 100%,
+    0 calc(100% - var(--cut)),
+    0 var(--cut)
+  );
+}
+
+.fancy-box.withd-box {
+  height: 620px;
+}
+.fancy-box.transfer-box {
+  height: 560px;
+}
+/* GOLD BORDER — animated full-rectangle gradient */
+.fancy-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  /* full-rectangle gold gradient */
+  background: linear-gradient(
+    90deg,
+    #d0b291,
+    #ead2b8,
+    #fff3dc,
+    #ead2b8,
+    #d0b291
+  );
+  background-size: 300% 300%;
+  animation: gold-flow 6s linear infinite;
+
+  clip-path: polygon(
+    calc(var(--cut) - var(--border)) -var(--border),
+    calc(100% - var(--cut) + var(--border)) -var(--border),
+    calc(100% + var(--border)) calc(var(--cut) - var(--border)),
+    calc(100% + var(--border)) calc(100% - var(--cut) + var(--border)),
+    calc(100% - var(--cut) + var(--border)) calc(100% + var(--border)),
+    calc(var(--cut) - var(--border)) calc(100% + var(--border)),
+    -var(--border) calc(100% - var(--cut) + var(--border)),
+    -var(--border) calc(var(--cut) - var(--border))
+  );
+}
+
+/* WHITE CENTER MASK */
+.fancy-box::after {
+  content: "";
+  position: absolute;
+  inset: var(--border);
+  z-index: -1;
+
+  background: #fffdf9;
+
+  clip-path: polygon(
+    var(--cut) 0,
+    calc(100% - var(--cut)) 0,
+    100% var(--cut),
+    100% calc(100% - var(--cut)),
+    calc(100% - var(--cut)) 100%,
+    var(--cut) 100%,
+    0 calc(100% - var(--cut)),
+    0 var(--cut)
+  );
+}
+
+/* ANIMATION */
+@keyframes gold-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+/* == GAMES == */
+.column-transactions {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: nowrap;
+}
+/* Webkit browsers */
+.column-transactions::-webkit-scrollbar {
+  height: 8px; /* horizontal scrollbar height */
+}
+
+.column-transactions::-webkit-scrollbar-track {
+  background: rgba(213, 143, 74, 0.15);
+  border-radius: 10px;
+}
+
+.column-transactions::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ead2b8, #d58f4a, #c47a34);
+  border-radius: 10px;
+}
+
+.column-transactions::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #f1ddc2, #d58f4a, #b96c2a);
+}
+
+/* Firefox */
+.column-transactions {
+  scrollbar-width: thin;
+  scrollbar-color: #d58f4a rgba(213, 143, 74, 0.15);
+}
+/* ===============================
+   DEPOSIT 
+================================ */
+.txn-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  color: #fff8dc; /* light golden text */
+}
+
+.txn-table td {
+  padding: 6px;
+  vertical-align: top;
+}
+.txn-table tr {
+  line-height: 1.6;
+}
+/* Normal 2-td row label */
+.table-label {
+  display: inline-block;
+  width: 120px; /* fixed width for left column */
+  font-weight: bold;
+  font-size: 13px;
+  vertical-align: top;
+  color: #484149;
+  padding-top: 5px;
+}
+
+.table-content {
+  display: inline-block;
+  width: calc(100% - 130px);
+  vertical-align: top;
+  padding-left: 10px;
+  box-sizing: border-box;
+  color: #484149; /* dark gray text */
+}
+.table-content > * {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* ===============================
+   DESCRIPTION
+================================ */
+.table-content-full {
+  width: 100%;
+  padding: 10px 0;
+  color: #484149; /* dark gray text */
+}
+
+.table-label-full {
+  display: block;
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.table-bullet-list-full {
+  list-style-type: disc; /* bullet points */
+  margin: 0;
+  padding-left: 20px;
+}
+
+.table-bullet-list-full li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.txn-warning {
+  list-style: none;
+  padding-left: 0;
+  margin-left: -16px;
+  color: #e1ba92;
+  font-weight: bold;
+}
+
+/* ===============================
+   FORM ELEMENTS
+================================ */
+.table-input {
+  max-width: 310px;
+  width: 100%;
+  margin-left: 10px;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #d58f4a;
+  background-color: #f0f0f0;
+  color: #484149;
+}
+
+.amount-input {
+  text-align: right;
+}
+
+.radio-item {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #484149;
+  display: inline-block;
+}
+
+.radio-item input[type="radio"] {
+  -webkit-appearance: none; /* remove default style */
+  -moz-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #d58f4a;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  margin-right: 5px;
+  vertical-align: middle;
+  background-color: #f0f0f0;
+  transition: all 0.2s ease;
+}
+
+.radio-item input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #d58f4a;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Wrapper: flex container for buttons + reset */
+.amount-group-wrapper {
+  display: flex;
+  align-items: center; /* vertically center reset button */
+  gap: 10px;
+  margin-left: 10px;
+}
+
+/* Amount buttons: 5 per row using grid */
+.amount-button-group {
+  display: grid;
+  grid-template-columns: repeat(5, 98px); /* 5 buttons per row */
+  grid-auto-rows: 25px; /* button height */
+  gap: 5px;
+}
+
+/* Amount buttons style */
+.amount-button-group button {
+  background: #b9bbbd;
+  color: #ffffff;
+  border: 1px solid #e1ba92;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.amount-button-group button:hover {
+  background: #f0c895;
+  color: #484149;
+  transform: translateY(-2px);
+}
+
+/* Reset button group */
+.reset-button-group {
+  display: flex;
+  align-items: center;
+}
+
+.reset-button-group button {
+  background-image: linear-gradient(to bottom, #e1ba92, #f0e4d4);
+  border: 1px solid #e1ba92;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  color: #484149;
+}
+
+.reset-button-group button:hover {
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   TEXT
+================================ */
+.guest-name {
+  font-weight: bold;
+  margin-left: 10px;
+  color: #d58f4a;
+}
+
+.bank-info {
+  color: #484149;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.txn-note {
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.txn-note.error {
+  color: #ff4848;
+}
+
+.txn-note.info {
+  color: #3bb3ff;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.btn-confirm,
+.btn-cancel {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+  margin: 10px 5px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-confirm {
+  background-image: linear-gradient(to bottom, #f0c895, #d58f4a);
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-confirm:hover {
+  background: #d3b99f;
+  transform: translateY(-2px);
+  outline: none;
+}
+.btn-confirm:focus {
+  outline: none;
+}
+
+.btn-confirm.small {
+  padding: 3px 10px;
+  background-image: linear-gradient(to bottom, #e1ba92, #f0e4d4);
+  border: 1px solid #e1ba92;
+  outline: none;
+  padding: 5px 10px;
+}
+
+.btn-cancel {
+  background: #e7d1b3;
+  color: #333;
+}
+
+.btn-cancel:hover {
+  background: #d3b99f;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+/* ===============================
+   ACTIONS
+================================ */
+.form-actions {
+  text-align: center;
+}
+
+/* ===============================
+   WITHDRAW (USES DEPOSIT STYLES)
+================================ */
+/* == ACCOUNT SELECT (WITHDRAW)== */
+.accountnumber {
+  width: 140px;
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 6px;
+  border: 1px solid #d58f4a;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #484149;
+  font-weight: bold;
+  outline: none;
+  vertical-align: middle;
+}
+
+.accountnumber:disabled {
+  opacity: 1;
+}
+
+/* visibility */
+.input-hidden {
+  display: none !important;
+}
+
+.input-shown {
+  display: inline-block;
+}
+
+/* dropdown */
+.acctnumber-option {
+  padding: 5px 8px;
+  border: 1px solid #d58f4a;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #484149;
+  font-weight: bold;
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+}
+/* == TRANSFER == */
+
+/* optional: slightly softer text */
+.transfer-bullet-list li {
+  font-weight: normal;
+}

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ASIANCONNECT</title>
+    <link rel="icon" href="images/weblogo.png" type="image/png" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/login-register.css" />
+    <link rel="stylesheet" type="text/css" href="css/gamepage.css" />
+    <link rel="stylesheet" type="text/css" href="css/transactions.css" />
+  </head>
+
+  <body>
+    <!-- Header Navbar -->
+    <div class="header">
+      <div class="header-inner">
+        <img class="contact" src="Images/contact.png" alt="contact" />
+        <div class="realtime">
+          <span id="date_time"></span>
+          <img src="Images/korea.png" class="korea-active" alt="korea" />
+        </div>
+      </div>
+    </div>
+    <!-- Primary Navbar -->
+    <div class="top-nav">
+      <div class="top-nav-inner">
+        <!-- LEFT -->
+        <div class="nav-left">
+          <div class="nav-logo">
+            <img
+              src="Images/headerlogo.png"
+              alt="Logo"
+              onclick="location.href='index.html'"
+            />
+          </div>
+          <nav class="nav-menu">
+            <a
+              href="deposit.html"
+              class="<?= ($page === 'deposit') ? 'active' : '' ?>"
+              >입금</a
+            >
+            <a
+              href="withdraw.html"
+              class="<?= ($page === 'withdraw') ? 'active' : '' ?>"
+              >출금</a
+            >
+            <a
+              href="transfer.html"
+              class="<?= ($page === 'transfer') ? 'active' : '' ?>"
+              >머니이동</a
+            >
+            <a
+              href="sports.html"
+              class="<?= ($page === 'sports') ? 'active' : '' ?>"
+              >스포츠</a
+            >
+            <a
+              href="casino.html"
+              class="<?= ($page === 'casino') ? 'active' : '' ?>"
+              >카지노</a
+            >
+            <a
+              href="slots.html"
+              class="<?= ($page === 'slots') ? 'active' : '' ?>"
+              >슬롯</a
+            >
+            <a
+              href="bonus.html"
+              class="<?= ($page === 'bonus') ? 'active' : '' ?>"
+              >보너스</a
+            >
+            <a
+              href="customer-service.html"
+              class="<?= ($page === 'customer-service') ? 'active' : '' ?>"
+              >고객센터</a
+            >
+            <a
+              href="streaming.html"
+              class="<?= ($page === 'streaming') ? 'active' : '' ?>"
+              >스트리밍</a
+            >
+          </nav>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="nav-right">
+          <div class="profile">
+            <img src="Images/profile.png" alt="Profile" />
+          </div>
+
+          <div class="auth-box">
+            <a href="#" class="login-link" id="openLogin">로그인 / 회원가입</a>
+            <a href="#" class="buddy-link">Buddy 보너스</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Primary Navbar -->
+
+    <!-- Login Modal -->
+    <div class="login-modal-overlay" id="loginModal">
+      <div class="login-modal">
+        <span class="login-close" id="closeLogin">&times;</span>
+
+        <!-- Logo -->
+        <div class="login-logo">
+          <img src="images/headerlogo.png" alt="Logo" />
+        </div>
+
+        <!-- LOGIN FORM -->
+        <form class="login-form" method="post" action="login.html">
+          <div class="input-group">
+            <span class="icon">👤</span>
+            <input type="text" name="username" placeholder="아이디" required />
+          </div>
+          <div class="input-group">
+            <span class="icon">🔒</span>
+            <input
+              type="password"
+              name="password"
+              id="passwordInput"
+              placeholder="비밀번호"
+              required
+            /><span class="toggle-password" id="togglePassword">👁</span>
+          </div>
+
+          <!-- Find ID / Password -->
+          <div class="login-links">
+            <a href="find-id.html">아이디</a><span>|</span
+            ><a href="find-password.html">비밀번호찾기</a>
+          </div>
+
+          <!-- Login Button -->
+          <button type="submit" class="login-btn">로그인</button>
+
+          <!-- Quick Action Buttons -->
+          <div class="login-quick-buttons">
+            <a href="buddy-bonus.html" class="quick-btn">
+              <img src="images/login-icon-buddy.png" alt="Buddy 보너스" />
+              <span>Buddy 보너스</span>
+            </a>
+            <a href="register.html" class="quick-btn register-fancy">
+              <img src="images/login-icon-register.png" alt="회원가입" />
+              <span>회원가입</span>
+            </a>
+            <a href="support.html" class="quick-btn">
+              <img src="images/login-icon-cs.png" alt="고객 서비스" />
+              <span>고객 서비스</span>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="slider-container">
+      <div class="slides">
+        <div class="slide active">
+          <img src="Images/slidebanner1.png" alt="Slide 1" />
+        </div>
+        <div class="slide">
+          <img src="Images/slidebanner2.png" alt="Slide 2" />
+        </div>
+        <div class="slide">
+          <img src="Images/slidebanner3.png" alt="Slide 3" />
+        </div>
+        <div class="slide">
+          <img src="Images/slidebanner4.png" alt="Slide 4" />
+        </div>
+        <div class="slide">
+          <img src="Images/slidebanner5.png" alt="Slide 5" />
+        </div>
+        <div class="slide">
+          <img src="Images/slidebanner6.png" alt="Slide 6" />
+        </div>
+      </div>
+
+      <div class="hexagon-nav">
+        <div class="hexagon-wrapper" data-index="0">
+          <div class="hexagon-outline"></div>
+          <div class="hexagon"></div>
+        </div>
+        <div class="hexagon-wrapper" data-index="1">
+          <div class="hexagon-outline"></div>
+          <div class="hexagon"></div>
+        </div>
+        <div class="hexagon-wrapper" data-index="2">
+          <div class="hexagon-outline"></div>
+          <div class="hexagon"></div>
+        </div>
+        <div class="hexagon-wrapper" data-index="3">
+          <div class="hexagon-outline"></div>
+          <div class="hexagon"></div>
+        </div>
+        <div class="hexagon-wrapper" data-index="4">
+          <div class="hexagon-outline"></div>
+          <div class="hexagon"></div>
+        </div>
+        <div class="hexagon-wrapper" data-index="5">
+          <div class="hexagon-outline"></div>
+          <div class="hexagon"></div>
+        </div>
+      </div>
+    </div>
+    <!--End of Carousel -->
+
+    <!-- Notice Scroll Area -->
+    <div class="notice-bg">
+      <div class="notice-bar">
+        <div class="notice-icon">
+          <img src="Images/notice-icon.png" alt="Notice" />
+        </div>
+
+        <div class="notice-marquee">
+          <div class="marquee-track">
+            <span>2025-11-22 황룡카지노 운영 안내</span>
+            <span>2024-11-26 보너스 신청방법 안내</span>
+            <span>2024-11-26 카지노 1일 당첨금 안내입니다</span>
+            <span>2024-11-26 1인다계정 제재 안내</span>
+            <span>2024-11-26 그룹베팅 강력처벌 공지</span>
+          </div>
+        </div>
+
+        <button class="notice-btn">공지사항</button>
+      </div>
+    </div>
+
+    <!-- Live Sports & Drama -->
+    <div class="stream-buttons">
+      <a href="#" class="stream-btn">
+        <img src="Images/sports-stream-button.png" alt="Sports Stream" />
+      </a>
+      <a href="#" class="stream-btn">
+        <img src="Images/drama-stream-button.png" alt="Drama Stream" />
+      </a>
+    </div>
+
+    <!-- Game Menu -->
+    <div class="game-menu-title-wrap">
+      <img src="images/game-menu-title.png" alt="Game Menu Title" />
+    </div>
+    <div class="menu-tabs">
+      <!-- TAB BUTTONS -->
+      <div class="tab-buttons">
+        <img
+          src="images/active-sports-menu-button.png"
+          class="tab-btn active"
+          data-tab="sports"
+        />
+
+        <img
+          src="images/inactive-casino-menu-button.png"
+          class="tab-btn"
+          data-tab="casino"
+        />
+
+        <img
+          src="images/inactive-sports-menu-button.png"
+          class="tab-btn"
+          data-tab="slots"
+        />
+      </div>
+
+      <!-- TAB CONTENT -->
+      <div class="tab-content">
+        <div class="tab-panel active" id="sports">
+          <div class="tab-grid">
+            <img src="images/bt-spt-gm-bt.png" alt="bti" />
+            <img src="images/bt-spt-gm-bt1.png" alt="bt1" />
+            <img src="images/bt-spt-gm-so.png" alt="sbobet" />
+            <img src="images/bt-spt-gm-saba.png" alt="saba" />
+            <img src="images/bt-spt-gm-apnb.png" alt="apsports" />
+            <img src="images/bt-spt-gm-igx.png" alt="igx" />
+            <img src="images/bt-spt-gm-vs.png" alt="virtual sports" />
+          </div>
+        </div>
+
+        <div class="tab-panel" id="casino">
+          <div class="tab-grid">
+            <img src="images/bt-csn-gm-pts.png" alt="playtech" />
+            <img src="images/bt-csn-gm-mcrog.png" alt="microgaming" />
+            <img src="images/bt-csn-gm-evga.png" alt="evolution" />
+            <img src="images/bt-csn-gm-so.png" alt="sbobet" />
+            <img src="images/bt-csn-gm-ezg.png" alt="ezugi" />
+            <img src="images/bt-csn-gm-t1.png" alt="T1" />
+            <img src="images/bt-csn-gm-bbga.png" alt="bbin" />
+            <img src="images/bt-csn-gm-pace.png" alt="playace" />
+            <img src="images/bt-csn-gm-ogd.png" alt="oriental" />
+            <img src="images/bt-csn-gm-abgd.png" alt="allbet" />
+            <img src="images/bt-csn-gm-seibbc.png" alt="sexybaccarat" />
+            <img src="images/bt-csn-gm-prgmg.png" alt="pragmatic" />
+            <img src="images/bt-csn-gm-wmgc.png" alt="wmcasino" />
+          </div>
+        </div>
+
+        <div class="tab-panel" id="slots">
+          <div class="tab-grid">
+            <img
+              src="images/bt-slt-gm-pts.png"
+              alt="playtech"
+              onclick="location.href='gamepage-pts.html'"
+            />
+            <img
+              src="images/bt-slt-gm-mcrog.png"
+              alt="micro"
+              onclick="location.href='gamepage-mcrog.html'"
+            />
+            <img src="images/bt-slt-gm-cg9.png" alt="cq9" />
+            <img
+              src="images/bt-slt-gm-pgsft.png"
+              alt="pgsoft"
+              onclick="location.href='gamepage-pgsft.html'"
+            />
+            <img
+              src="images/bt-slt-gm-prgmg.png"
+              alt="pragmatic"
+              onclick="location.href='gamepage-prgmg.html'"
+            />
+            <img
+              src="images/bt-slt-gm-pggg.png"
+              alt="playngo"
+              onclick="location.href='gamepage-pggg.html'"
+            />
+            <img src="images/bt-slt-gm-redtig.png" alt="redtiger" />
+            <img src="images/bt-slt-gm-568.png" alt="568win" />
+            <img
+              src="images/bt-slt-gm-hbnrg.png"
+              alt="habanero"
+              onclick="location.href='gamepage-hbnrg.html'"
+            />
+            <img
+              src="images/bt-slt-gm-ntt.png"
+              alt="netent"
+              onclick="location.href='gamepage-ntt.html'"
+            />
+            <img
+              src="images/bt-slt-gm-drtg.png"
+              alt="dreamtech"
+              onclick="location.href='gamepage-drtg.html'"
+            />
+            <img src="images/bt-slt-gm-pace.png" alt="playace" />
+            <img
+              src="images/bt-slt-gm-bbga.png"
+              alt="bbin"
+              onclick="location.href='gamepage-bbga.html'"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIVE DEPOSIT / WITHDRAW -->
+    <section class="live-ticker">
+      <div class="live-panel">
+        <div class="live-title">
+          <img src="images/livedep-menu-title.png" alt="Live Deposit" />
+        </div>
+
+        <div class="live-viewport">
+          <table class="live-table" id="liveDeposit"></table>
+        </div>
+      </div>
+
+      <div class="live-panel">
+        <div class="live-title">
+          <img src="images/livewith-menu-title.png" alt="Live Withdraw" />
+        </div>
+
+        <div class="live-viewport">
+          <table class="live-table" id="liveWithdraw"></table>
+        </div>
+      </div>
+    </section>
+
+    <!--FOOTER -->
+    <footer>
+      <div class="footer-logos">
+        <img src="Images/footer-logos.png" alt="Partners" />
+      </div>
+      <div class="footer-nav">
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>ABOUT</h4>
+            <ul>
+              <li><a href="#">보너스</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">메세지 보내기</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>SERVICES</h4>
+            <ul>
+              <li><a href="#">입금</a></li>
+              <li><a href="#">출금</a></li>
+              <li><a href="#">머니이동</a></li>
+              <li><a href="#">프로모션 신청</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>BANKS</h4>
+            <ul>
+              <li>Neteller</li>
+              <li>Moneybookers</li>
+              <li>MasterCard</li>
+              <li>Bitcoin</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/login-register.js"></script>
+    <script src="js/realtime.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/homescripts.js"></script>
+  </body>
+</html>

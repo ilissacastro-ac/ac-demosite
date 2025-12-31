@@ -1,0 +1,658 @@
+body {
+  margin: 0;
+  width: 100%;
+  background-image: url("../Images/main-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+/* Slider container */
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  height: 480px;
+  overflow: hidden;
+  z-index: 1;
+}
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Slides stacked */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(100%); /* start off right */
+  transition: opacity 3s ease-in-out, transform 3s ease-in-out; /* slide + fade */
+  pointer-events: none;
+}
+
+/* Active slide */
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  z-index: 1;
+}
+
+/* Slide leaving to left */
+.slide.prev {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: 0;
+}
+
+/* Slide leaving to right */
+.slide.next {
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 0;
+}
+
+/* Hexagon navigation */
+.hexagon-nav {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px; /* spacing between hexagons */
+  z-index: 100;
+}
+.hexagon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 10px; /* slightly bigger to accommodate outline */
+  height: 10px;
+  overflow: visible;
+}
+
+/* Hexagon outline (slightly bigger than fill) */
+.hexagon-outline {
+  position: absolute;
+  width: 18px; /* slightly larger than wrapper */
+  height: 18px;
+  background: transparent;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  border: 3px solid #e7c3a1; /* gold outline */
+  transform: rotate(90deg);
+  display: none;
+  box-sizing: border-box;
+  z-index: 0;
+}
+
+/* Show outline on active hexagon wrapper */
+.hexagon-wrapper.active .hexagon-outline {
+  display: block;
+}
+
+/* Hexagon fill */
+.hexagon {
+  width: 100%;
+  height: 100%;
+  background-color: #a5aabc;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  transform: rotate(90deg);
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+/* Active hexagon fill */
+.hexagon.active {
+  background-color: #e7c3a1; /* match outline color */
+}
+
+/* Notice Bar */
+.notice-bg {
+  width: 100%;
+  padding: 20px 0;
+
+  background: url("../Images/notice-bg.png") center center no-repeat;
+}
+
+.notice-bar {
+  width: 60%;
+  margin: 10px auto;
+  position: relative;
+
+  background: linear-gradient(to bottom, #fafaff 0%, #e9ecff 100%);
+
+  border-radius: 30px;
+  border: 1px solid #c2c6d3;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: "BinggraeII", sans-serif;
+
+  overflow: visible;
+}
+.notice-icon {
+  position: relative;
+  margin-left: 12px;
+  margin-right: 5px;
+}
+
+/* Icon */
+.notice-icon img {
+  width: 38px;
+  height: 38px;
+  transform: translateY(-12px);
+
+  filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.35));
+}
+
+/* Marquee container */
+.notice-marquee {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Marquee animation */
+.marquee-track {
+  display: inline-flex;
+  gap: 80px;
+  width: max-content;
+
+  animation: marquee 10s linear infinite;
+}
+
+.marquee-track span {
+  color: #333;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Button */
+.notice-btn {
+  padding: 2px 18px;
+  margin-right: 5px;
+  border-radius: 20px;
+  border: none;
+  color: #f0c895;
+  background: linear-gradient(to bottom, #fafaff 0%, #e3e6fc 100%);
+  font-size: 15px;
+  font-weight: 300;
+  cursor: pointer;
+  flex-shrink: 0;
+  border: 1px solid #f0c895;
+}
+
+.notice-btn:hover {
+  background: #d2b79c;
+  color: #ffffff;
+}
+
+/* Keyframes */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* STREAMING */
+.stream-buttons {
+  width: 60%;
+  margin: 20px auto 0;
+
+  display: flex;
+  gap: 16px;
+}
+
+.stream-btn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.stream-btn img {
+  width: 80%;
+  height: auto;
+  display: block;
+
+  border-radius: 20px;
+  cursor: pointer;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover effect */
+.stream-btn img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Game Menu */
+.game-menu-title-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  padding-top: 30px;
+}
+
+.game-menu-title-wrap img {
+  width: 800px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.menu-tabs {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+/* Buttons */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.tab-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Content */
+.tab-panel {
+  display: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.tab-panel.active {
+  display: block;
+}
+/* Games */
+.tab-grid {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 60px;
+  padding: 10px 0;
+}
+
+.tab-grid img {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  filter: brightness(1);
+}
+
+.tab-grid img {
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.tab-grid img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+@media (max-width: 1024px) {
+  .tab-grid img {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tab-grid {
+    width: 100%;
+  }
+
+  .tab-grid img {
+    width: 45%;
+  }
+}
+:root {
+  --border: clamp(2px, 0.2vw, 4px);
+}
+
+/* ================================
+   LIVE DEPOSIT / WITHDRAW CONTAINER
+================================ */
+.live-ticker {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 1024px) {
+  .live-ticker {
+    width: 100%;
+    gap: 20px;
+    flex-direction: column;
+  }
+}
+
+/* ================================
+   PANEL — FULL GRADIENT BORDER
+================================ */
+.live-panel {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fafaff;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 0;
+  border-radius: 5px;
+}
+
+/* Full rectangle gradient border */
+.live-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  padding: var(--border);
+  background: linear-gradient(
+    90deg,
+    #d0b291,
+    #ead2b8,
+    #fff3dc,
+    #ead2b8,
+    #d0b291
+  );
+  background-size: 300% 300%;
+  animation: gold-flow 6s linear infinite;
+  clip-path: inset(0); /* show full rectangle */
+}
+
+/* White inner mask */
+.live-panel::after {
+  content: "";
+  position: absolute;
+  inset: var(--border);
+  z-index: -1;
+  background: #fafaff;
+}
+
+/* Keep panel content above border */
+.live-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================================
+   TITLE
+================================ */
+.live-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+}
+
+.live-title img {
+  display: block;
+  max-width: 98%;
+  height: auto;
+}
+
+/* ================================
+   VIEWPORT & FADE
+================================ */
+.live-viewport {
+  width: 100%;
+  height: calc(6 * 36px);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Top fade */
+.live-viewport::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), transparent);
+}
+
+/* Bottom fade */
+.live-viewport::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.9), transparent);
+}
+
+/* ================================
+   TABLE & SCROLL
+================================ */
+.live-table {
+  width: 100%;
+  border-collapse: collapse;
+  animation: liveScroll 10s linear infinite;
+  will-change: transform;
+}
+
+/* Horizontal padding on all table rows */
+.live-table tr td {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+@keyframes liveScroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+/* ================================
+   ROWS
+================================ */
+.live-row td {
+  height: 36px;
+  line-height: 40px;
+  font-size: 13px;
+  padding: 0;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.live-table tr:nth-child(even) td {
+  background-color: rgba(232, 207, 181, 0.35);
+}
+
+/* ================================
+   CELLS
+================================ */
+.live-user {
+  text-align: left;
+  padding-left: 6px;
+}
+
+.live-amount {
+  text-align: right;
+  padding-right: 10px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.live-date {
+  text-align: right;
+  padding-right: 6px;
+  opacity: 0.85;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ================================
+   NEWEST GLOW
+================================ */
+.live-row.is-new td {
+  animation: rowGlow 1.5s ease-out;
+}
+
+@keyframes rowGlow {
+  0% {
+    background-color: rgba(240, 200, 149, 0.85);
+    box-shadow: 0 0 14px rgba(240, 200, 149, 0.9);
+  }
+  100% {
+    background-color: rgba(240, 200, 149, 0.15);
+    box-shadow: none;
+  }
+}
+
+/* ================================
+   GOLD BORDER ANIMATION
+================================ */
+@keyframes gold-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Footer */
+footer {
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.06);
+  background: #ffffff;
+}
+.footer-logos img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.footer-nav {
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    #f0c895,
+    #d58f4a
+  ); /* full width color */
+  display: flex;
+  justify-content: center;
+}
+
+.footer-links {
+  width: 60%; /* content width */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 10px 0px 5px 0px;
+  text-align: center;
+}
+
+/* Titles */
+.footer-column h4 {
+  font-size: 14px;
+  margin-bottom: 1px;
+  color: #484149;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.footer-column:nth-child(3) ul {
+  gap: 4px;
+}
+
+/* Lists */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* horizontal */
+  justify-content: center; /* center items */
+  gap: 12px;
+  flex-wrap: wrap; /* wrap nicely if too long */
+}
+
+.footer-column li {
+  font-size: 13px;
+  color: #59595c;
+  position: relative;
+  padding-right: 12px;
+}
+
+/* add | separator */
+.footer-column li::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  color: #59595c;
+  opacity: 0.6;
+}
+
+/* remove | from last item */
+.footer-column li:last-child::after {
+  content: "";
+}
+
+.footer-column a {
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  color: #59595c;
+}
+
+.footer-column a:hover {
+  opacity: 0.7;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer-links {
+    width: 100%;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ASIANCONNECT</title>
+    <link rel="icon" href="images/weblogo.png" type="image/png" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/login-register.css" />
+    <link rel="stylesheet" type="text/css" href="css/transactions.css" />
+  </head>
+
+  <body>
+    <!-- Header Navbar -->
+    <div class="header">
+      <div class="header-inner">
+        <img class="contact" src="Images/contact.png" alt="contact" />
+        <div class="realtime">
+          <span id="date_time"></span>
+          <img src="Images/korea.png" class="korea-active" alt="korea" />
+        </div>
+      </div>
+    </div>
+    <!-- Primary Navbar -->
+    <div class="top-nav">
+      <div class="top-nav-inner">
+        <!-- LEFT -->
+        <div class="nav-left">
+          <div class="nav-logo">
+            <img
+              src="Images/headerlogo.png"
+              alt="Logo"
+              onclick="location.href='index.html'"
+            />
+          </div>
+          <nav class="nav-menu">
+            <a
+              href="deposit.html"
+              class="<?= ($page === 'deposit') ? 'active' : '' ?>"
+              >입금</a
+            >
+            <a
+              href="withdraw.html"
+              class="<?= ($page === 'withdraw') ? 'active' : '' ?>"
+              >출금</a
+            >
+            <a
+              href="transfer.html"
+              class="<?= ($page === 'transfer') ? 'active' : '' ?>"
+              >머니이동</a
+            >
+            <a
+              href="sports.html"
+              class="<?= ($page === 'sports') ? 'active' : '' ?>"
+              >스포츠</a
+            >
+            <a
+              href="casino.html"
+              class="<?= ($page === 'casino') ? 'active' : '' ?>"
+              >카지노</a
+            >
+            <a
+              href="slots.html"
+              class="<?= ($page === 'slots') ? 'active' : '' ?>"
+              >슬롯</a
+            >
+            <a
+              href="bonus.html"
+              class="<?= ($page === 'bonus') ? 'active' : '' ?>"
+              >보너스</a
+            >
+            <a
+              href="customer-service.html"
+              class="<?= ($page === 'customer-service') ? 'active' : '' ?>"
+              >고객센터</a
+            >
+            <a
+              href="streaming.html"
+              class="<?= ($page === 'streaming') ? 'active' : '' ?>"
+              >스트리밍</a
+            >
+          </nav>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="nav-right">
+          <div class="profile">
+            <img src="Images/profile.png" alt="Profile" />
+          </div>
+
+          <div class="auth-box">
+            <a href="#" class="login-link" id="openLogin">로그인 / 회원가입</a>
+            <a href="#" class="buddy-link">Buddy 보너스</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Primary Navbar -->
+
+    <!-- Login Modal -->
+    <div class="login-modal-overlay" id="loginModal">
+      <div class="login-modal">
+        <span class="login-close" id="closeLogin">&times;</span>
+
+        <!-- Logo -->
+        <div class="login-logo">
+          <img src="images/headerlogo.png" alt="Logo" />
+        </div>
+
+        <!-- LOGIN FORM -->
+        <form class="login-form" method="post" action="login.html">
+          <div class="input-group">
+            <span class="icon">👤</span>
+            <input type="text" name="username" placeholder="아이디" required />
+          </div>
+          <div class="input-group">
+            <span class="icon">🔒</span>
+            <input
+              type="password"
+              name="password"
+              id="passwordInput"
+              placeholder="비밀번호"
+              required
+            /><span class="toggle-password" id="togglePassword">👁</span>
+          </div>
+
+          <!-- Find ID / Password -->
+          <div class="login-links">
+            <a href="find-id.html">아이디</a><span>|</span
+            ><a href="find-password.html">비밀번호찾기</a>
+          </div>
+
+          <!-- Login Button -->
+          <button type="submit" class="login-btn">로그인</button>
+
+          <!-- Quick Action Buttons -->
+          <div class="login-quick-buttons">
+            <a href="buddy-bonus.html" class="quick-btn">
+              <img src="images/login-icon-buddy.png" alt="Buddy 보너스" />
+              <span>Buddy 보너스</span>
+            </a>
+            <a href="register.html" class="quick-btn register-fancy">
+              <img src="images/login-icon-register.png" alt="회원가입" />
+              <span>회원가입</span>
+            </a>
+            <a href="support.html" class="quick-btn">
+              <img src="images/login-icon-cs.png" alt="고객 서비스" />
+              <span>고객 서비스</span>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Game Page -->
+    <div class="transactions-title-wrap">
+      <img src="images/trans-dep-menu-title.png" alt="Game Menu Title" />
+    </div>
+
+    <div class="transactions-tabs">
+      <div class="transactions-tab-buttons">
+        <a href="deposit.html">
+          <img
+            src="images/active-deposit-menu-button.png"
+            class="transactions-tab-btn"
+            onclick="location.href='deposit.html'"
+            alt="deposit"
+          />
+        </a>
+        <a href="withdraw.html">
+          <img
+            src="images/inactive-withdraw-menu-button.png"
+            class="transactions-tab-btn"
+            onclick="location.href='withdraw.html'"
+            alt="withdraw"
+          />
+        </a>
+        <a href="transfer.html">
+          <img
+            src="images/inactive-transfer-menu-button.png"
+            class="transactions-tab-btn"
+            onclick="location.href='transfer.html'"
+            alt="transfer"
+          />
+        </a>
+      </div>
+    </div>
+
+    <!-- TAB CONTENT -->
+    <div class="fancy-box dep-box">
+      <div class="column-transactions">
+        <form
+          name="deposit-form"
+          method="post"
+          onsubmit="return depositValidate()"
+          class="txn-form"
+        >
+          <table class="txn-table deposit-table">
+            <tr>
+              <td class="table-content-full">
+                <span class="table-label-full">입금 약관</span>
+                <ul class="table-bullet-list-full">
+                  <li>입금계좌와 출금계좌는 동일하여야 합니다.</li>
+                  <li>
+                    최소 입금액은 2만원 이며 1만원단위로만 충전이가능합니다.
+                    20,000원, 110,000원 등은 충전가능 <br />/ 19,000원, 23,000원
+                    등은 충전불가
+                  </li>
+                  <li>1회 입금제한 최대500만원이며 고액입금시 고객센터 문의</li>
+                  <li>
+                    다중 아이피 및 1인 다계정을 사용하여 적발시 사용 정지 처리
+                    될수 있습니다
+                  </li>
+                  <li class="txn-warning">
+                    - 계좌가 변경된 후에 이전계좌로 입금하시면 입금확인이 불가할
+                    수 있으니 주의 부탁드립니다.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="table-label">게임 선택</td>
+              <td class="table-content">
+                <label class="radio-item"
+                  ><input type="radio" name="game" value="sbobet" />
+                  스보벳</label
+                >
+                <label class="radio-item"
+                  ><input type="radio" name="game" value="maxbet" />
+                  맥스벳</label
+                >
+                <label class="radio-item"
+                  ><input type="radio" name="game" value="pinbet" />
+                  핀벳88</label
+                >
+                <label class="radio-item"
+                  ><input type="radio" name="game" value="micro" />
+                  마이크로</label
+                >
+                <label class="radio-item"
+                  ><input type="radio" name="game" value="taishan" />
+                  타이산</label
+                >
+                <label class="radio-item"
+                  ><input type="radio" name="game" value="evolution" /> 에볼루션
+                  카지노</label
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td class="table-label">금액 선택</td>
+              <td class="table-content">
+                <div class="amount-group-wrapper">
+                  <div class="amount-button-group">
+                    <button type="button" onclick="d_add(10000)">1만원</button>
+                    <button type="button" onclick="d_add(20000)">2만원</button>
+                    <button type="button" onclick="d_add(30000)">3만원</button>
+                    <button type="button" onclick="d_add(40000)">4만원</button>
+                    <button type="button" onclick="d_add(50000)">5만원</button>
+                    <button type="button" onclick="d_add(100000)">
+                      10만원
+                    </button>
+                    <button type="button" onclick="d_add(200000)">
+                      20만원
+                    </button>
+                    <button type="button" onclick="d_add(300000)">
+                      30만원
+                    </button>
+                    <button type="button" onclick="d_add(500000)">
+                      50만원
+                    </button>
+                    <button type="button" onclick="d_add(1000000)">
+                      100만원
+                    </button>
+                  </div>
+                  <div class="reset-button-group">
+                    <button type="button" onclick="d_reset()">다시 입력</button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="table-label">충전 금액</td>
+              <td class="table-content">
+                <input
+                  type="number"
+                  id="deposit-amount"
+                  name="deposit-amount"
+                  class="table-input amount-input"
+                  placeholder="0"
+                  step="10000"
+                  min="20000"
+                  max="1000000"
+                />
+                <span class="txn-note error"
+                  >* 수표 입금은 허용되지 않습니다.</span
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td class="table-label">입금자</td>
+              <td class="table-content">
+                <span class="guest-name">GUEST</span>
+                <span class="bank-info">입금은행 : 농협</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="table-label">계좌번호 요청</td>
+              <td class="table-content">
+                <input
+                  type="password"
+                  id="deposit-password"
+                  name="deposit-password"
+                  class="table-input"
+                  placeholder="환전 비밀번호 입력"
+                />
+                <button
+                  type="button"
+                  class="btn-confirm small"
+                  onclick="passConfirm()"
+                >
+                  확인
+                </button>
+                <span class="txn-note info"
+                  >☞ 환전 비밀번호 등록은 고객센터 문의</span
+                >
+              </td>
+            </tr>
+          </table>
+          <div class="form-actions">
+            <button type="submit" class="btn-confirm">확인</button>
+            <button
+              type="button"
+              class="btn-cancel"
+              onclick="window.parent.location='../home.html';"
+            >
+              취소
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!--FOOTER -->
+    <footer>
+      <div class="footer-logos">
+        <img src="Images/footer-logos.png" alt="Partners" />
+      </div>
+      <div class="footer-nav">
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>ABOUT</h4>
+            <ul>
+              <li><a href="#">보너스</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">메세지 보내기</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>SERVICES</h4>
+            <ul>
+              <li><a href="#">입금</a></li>
+              <li><a href="#">출금</a></li>
+              <li><a href="#">머니이동</a></li>
+              <li><a href="#">프로모션 신청</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>BANKS</h4>
+            <ul>
+              <li>Neteller</li>
+              <li>Moneybookers</li>
+              <li>MasterCard</li>
+              <li>Bitcoin</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/login-register.js"></script>
+    <script src="js/login-register.js"></script>
+    <script src="js/realtime.js"></script>
+    <script src="js/transactions.js"></script>
+  </body>
+</html>

@@ -1,0 +1,4119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ASIANCONNECT</title>
+    <link rel="icon" href="images/weblogo.png" type="image/png" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="css/login-register.css" />
+    <link rel="stylesheet" type="text/css" href="css/gamepage.css" />
+  </head>
+
+  <body>
+    <!-- Header Navbar -->
+    <div class="header">
+      <div class="header-inner">
+        <img class="contact" src="Images/contact.png" alt="contact" />
+        <div class="realtime">
+          <span id="date_time"></span>
+          <img src="Images/korea.png" class="korea-active" alt="korea" />
+        </div>
+      </div>
+    </div>
+    <!-- Primary Navbar -->
+    <div class="top-nav">
+      <div class="top-nav-inner">
+        <!-- LEFT -->
+        <div class="nav-left">
+          <div class="nav-logo">
+            <img
+              src="Images/headerlogo.png"
+              alt="Logo"
+              onclick="location.href='index.html'"
+            />
+          </div>
+          <nav class="nav-menu">
+            <a
+              href="deposit.html"
+              class="<?= ($page === 'deposit') ? 'active' : '' ?>"
+              >입금</a
+            >
+            <a
+              href="withdraw.html"
+              class="<?= ($page === 'withdraw') ? 'active' : '' ?>"
+              >출금</a
+            >
+            <a
+              href="transfer.html"
+              class="<?= ($page === 'transfer') ? 'active' : '' ?>"
+              >머니이동</a
+            >
+            <a
+              href="sports.html"
+              class="<?= ($page === 'sports') ? 'active' : '' ?>"
+              >스포츠</a
+            >
+            <a
+              href="casino.html"
+              class="<?= ($page === 'casino') ? 'active' : '' ?>"
+              >카지노</a
+            >
+            <a
+              href="slots.html"
+              class="<?= ($page === 'slots') ? 'active' : '' ?>"
+              >슬롯</a
+            >
+            <a
+              href="bonus.html"
+              class="<?= ($page === 'bonus') ? 'active' : '' ?>"
+              >보너스</a
+            >
+            <a
+              href="customer-service.html"
+              class="<?= ($page === 'customer-service') ? 'active' : '' ?>"
+              >고객센터</a
+            >
+            <a
+              href="streaming.html"
+              class="<?= ($page === 'streaming') ? 'active' : '' ?>"
+              >스트리밍</a
+            >
+          </nav>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="nav-right">
+          <div class="profile">
+            <img src="Images/profile.png" alt="Profile" />
+          </div>
+
+          <div class="auth-box">
+            <a href="#" class="login-link" id="openLogin">로그인 / 회원가입</a>
+            <a href="#" class="buddy-link">Buddy 보너스</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Primary Navbar -->
+
+    <!-- Login Modal -->
+    <div class="login-modal-overlay" id="loginModal">
+      <div class="login-modal">
+        <span class="login-close" id="closeLogin">&times;</span>
+
+        <!-- Logo -->
+        <div class="login-logo">
+          <img src="images/headerlogo.png" alt="Logo" />
+        </div>
+
+        <!-- LOGIN FORM -->
+        <form class="login-form" method="post" action="login.html">
+          <div class="input-group">
+            <span class="icon">👤</span>
+            <input type="text" name="username" placeholder="아이디" required />
+          </div>
+          <div class="input-group">
+            <span class="icon">🔒</span>
+            <input
+              type="password"
+              name="password"
+              id="passwordInput"
+              placeholder="비밀번호"
+              required
+            /><span class="toggle-password" id="togglePassword">👁</span>
+          </div>
+
+          <!-- Find ID / Password -->
+          <div class="login-links">
+            <a href="find-id.html">아이디</a><span>|</span
+            ><a href="find-password.html">비밀번호찾기</a>
+          </div>
+
+          <!-- Login Button -->
+          <button type="submit" class="login-btn">로그인</button>
+
+          <!-- Quick Action Buttons -->
+          <div class="login-quick-buttons">
+            <a href="buddy-bonus.html" class="quick-btn">
+              <img src="images/login-icon-buddy.png" alt="Buddy 보너스" />
+              <span>Buddy 보너스</span>
+            </a>
+            <a href="register.html" class="quick-btn register-fancy">
+              <img src="images/login-icon-register.png" alt="회원가입" />
+              <span>회원가입</span>
+            </a>
+            <a href="support.html" class="quick-btn">
+              <img src="images/login-icon-cs.png" alt="고객 서비스" />
+              <span>고객 서비스</span>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Game Page -->
+    <div class="gamepage-title-wrap">
+      <img src="images/game-title-pggg.png" alt="Game Menu Title" />
+    </div>
+
+    <!-- TAB CONTENT -->
+    <div class="fancy-box">
+      <div class="column-sltmpage">
+        <div class="sltm-games">
+          <div class="row-sltm">
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_15CrystalRosesATaleOfLove.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7877','16');"
+                  alt="15 Crystal Roses: A Tale of Love"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >15 Crystal Roses: A Tale of Love</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_24KDragon.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6201','16');"
+                  alt="24K Dragon"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">24K Dragon</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_3ClownMonty.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6360','16');"
+                  alt="3 Clown Monty"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">3 Clown Monty</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_3ClownMontyII.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9548','16');"
+                  alt="3 Clown Monty II"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >3 Clown Monty II</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_5xMagic.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5207','16');"
+                  alt="5x Magic"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">5x Magic</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_7Sins.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5208','16');"
+                  alt="7 Sins"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">7 Sins</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_AceOfSpades.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5209','16');"
+                  alt="Ace of Spades"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Ace of Spades</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_AgentDestiny.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5482','16');"
+                  alt="Agent Destiny"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Agent Destiny</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_AgentOfHearts.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7515','16');"
+                  alt="Agent of Hearts"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Agent of Hearts</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_AnimalMadness.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8343','16');"
+                  alt="Animal Madness"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Animal Madness</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_AnkhOfAnubis.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5334','16');"
+                  alt="Ankh of Anubis"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Ankh of Anubis</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_AnkhOfAnubisAwakening.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9742','16');"
+                  alt="Ankh of Anubis Awakening"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Ankh of Anubis Awakening</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Annihilator.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5474','16');"
+                  alt="Annihilator"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Annihilator</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_AthenaAscending.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8697','16');"
+                  alt="Athena Ascending"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Athena Ascending</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_AztecIdols.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5210','16');"
+                  alt="Aztec Idols"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Aztec Idols</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_AztecWarriorPrincess.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5211','16');"
+                  alt="Aztec Warrior Princess"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Aztec Warrior Princess</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_BakersTreat.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5212','16');"
+                  alt="Baker's Treat"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Baker's Treat</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_BananaRock.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5213','16');"
+                  alt="Banana Rock"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Banana Rock</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_BanquetOfDead.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9608','16');"
+                  alt="Banquet of Dead"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Banquet of Dead</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_BaronLordOfSaturday.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9750','16');"
+                  alt="Baron: Lord of Saturday"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Baron: Lord of Saturday</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_LegionGoldAndTheSphinxOfDead.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9752','16');"
+                  alt="Legion Gold and the Sphinx of Dead"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Legion Gold and the Sphinx of Dead</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_PiggyBlitzDiscoGold.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9753','16');"
+                  alt="Piggy Blitz Disco Gold"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Piggy Blitz Disco Gold</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_GoldOfFortuneGod.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9711','16');"
+                  alt="Gold of Fortune God"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Gold of Fortune God</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RichWildeAndTheTomeOfInsanity.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9712','16');"
+                  alt="Rich Wilde and the Tome of Insanity"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Rich Wilde and the Tome of Insanity</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ColtLightningFirestorm.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9699','16');"
+                  alt="Colt Lightning Firestorm"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Colt Lightning Firestorm</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_SparkOfGenius.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9700','16');"
+                  alt="Spark of Genius"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Spark of Genius</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_WildSurvivor.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9677','16');"
+                  alt="Wild Survivor"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wild Survivor</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Fulong88.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9678','16');"
+                  alt="Fulong 88"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Fulong 88</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_TheSwordAndTheGrailExcalibur.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9642','16');"
+                  alt="The Sword and the Grail Excalibur"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >The Sword and the Grail Excalibur</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_BoatBonanzaDownUnder.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9657','16');"
+                  alt="Boat Bonanza Down Under"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Boat Bonanza Down Under</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_TombOfGold.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9643','16');"
+                  alt="Tomb of Gold"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Tomb of Gold</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MysteryGenieFortunesOfTheLamp.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9644','16');"
+                  alt="Mystery Genie Fortunes of the Lamp"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Mystery Genie Fortunes of the Lamp</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_EasterEggspedition.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9645','16');"
+                  alt="Easter Eggspedition"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Easter Eggspedition</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_PiranhaPays.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9628','16');"
+                  alt="Piranha Pays"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Piranha Pays</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ChambersOfAncients.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9629','16');"
+                  alt="Chambers of Ancients"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Chambers of Ancients</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_BanquetOfDead.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9608','16');"
+                  alt="Banquet of Dead"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Banquet of Dead</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_LegionGoldUnleashed.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9609','16');"
+                  alt="Legion Gold Unleashed"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Legion Gold Unleashed</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_UndefeatedXerxes.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9579','16');"
+                  alt="Undefeated Xerxes"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Undefeated Xerxes</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CatWildeAndTheIncanQuest.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9580','16');"
+                  alt="Cat Wilde and the Incan Quest"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Cat Wilde and the Incan Quest</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_LoveIsInTheFair.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9581','16');"
+                  alt="Love is in the Fair"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Love is in the Fair</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MoonPrincessPowerOfLove.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9547','16');"
+                  alt="Moon Princess - Power of Love"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Moon Princess - Power of Love</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_3ClownMontyII.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9548','16');"
+                  alt="3 Clown Monty II"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >3 Clown Monty II</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_PandasticAdventure.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9527','16');"
+                  alt="Pandastic Adventure"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Pandastic Adventure</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_TalesOfMithruneSynsFortune.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9528','16');"
+                  alt="Tales of Mithrune Syn's Fortune"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Tales of Mithrune Syn's Fortune</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_VikingRunecraft100.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9483','16');"
+                  alt="Viking Runecraft 100"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Viking Runecraft 100</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MegaDonFeedingFrenzy.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9484','16');"
+                  alt="Mega Don Feeding Frenzy"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Mega Don Feeding Frenzy</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Gargantoonz.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9485','16');"
+                  alt="Gargantoonz"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Gargantoonz</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_InvadingVegasLasChristmas.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9468','16');"
+                  alt="Invading Vegas: Las Christmas"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Invading Vegas: Las Christmas</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_LegacyOfDynasties.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9444','16');"
+                  alt="Legacy of Dynasties"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Legacy of Dynasties</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_SherwoodGold.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9445','16');"
+                  alt="Sherwood Gold"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Sherwood Gold</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MonkeyBattleForTheScrolls.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9417','16');"
+                  alt="Monkey: Battle for the Scrolls"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Monkey: Battle for the Scrolls</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RuffHeist.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9418','16');"
+                  alt="Ruff Heist"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Ruff Heist</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RagingRex3.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9376','16');"
+                  alt="Raging Rex 3"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Raging Rex 3</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ReturnOfTheGreenKnight.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9377','16');"
+                  alt="Return of the Green Knight"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Return of the Green Knight</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_PiggyBlitz.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9361','16');"
+                  alt="Piggy Blitz"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Piggy Blitz</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_TempleOfProsperity.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9362','16');"
+                  alt="Temple of Prosperity"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Temple of Prosperity</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ScalesOfDead.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9345','16');"
+                  alt="Scales of Dead"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Scales of Dead</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_BoatBonanzaColossalCatch.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9323','16');"
+                  alt="Boat Bonanza Colossal Catch"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Boat Bonanza Colossal Catch</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_HoneyRush100.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9324','16');"
+                  alt="Honey Rush 100"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Honey Rush 100</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_HugoLegacy.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9296','16');"
+                  alt="Hugo Legacy"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Hugo Legacy</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_SweetAlchemy100.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9100','16');"
+                  alt="Sweet Alchemy 100"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Sweet Alchemy 100</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ScrollOfSeth.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9101','16');"
+                  alt="Scroll of Seth"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Scroll of Seth</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MerlinJourneyOfFlame.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9102','16');"
+                  alt="Merlin: Journey of Flame"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Merlin: Journey of Flame</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_FoxMayhem.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9078','16');"
+                  alt="Fox Mayhem"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Fox Mayhem</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_SparkyShortzHiddenJoules.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9079','16');"
+                  alt="Sparky & Shortz Hidden Joules"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Sparky & Shortz Hidden Joules</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_SweetAlchemy2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9046','16');"
+                  alt="Sweet Alchemy 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Sweet Alchemy 2</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RascalRiches.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('9047','16');"
+                  alt="Rascal Riches"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Rascal Riches</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Ternion.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8991','16');"
+                  alt="Ternion"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Ternion</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_VikingRunecraftApocalypse.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8992','16');"
+                  alt="Viking Runecraft: Apocalypse"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Viking Runecraft: Apocalypse</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_FreeReelinJoker1000.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8989','16');"
+                  alt="Free Reelin' Joker 1000"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Free Reelin' Joker 1000</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_HighwayLegends.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8990','16');"
+                  alt="Highway Legends"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Highway Legends</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Luchamigos.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8942','16');"
+                  alt="Luchamigos"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Luchamigos</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CaptainGlumPirateHunter.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8943','16');"
+                  alt="Captain Glum: Pirate Hunter"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Captain Glum: Pirate Hunter</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_GerardsGambit.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8944','16');"
+                  alt="Gerard's Gambit"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Gerard's Gambit</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RoninsHonour.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8912','16');"
+                  alt="Ronin's Honour"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Ronin's Honour</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Slashimi.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8889','16');"
+                  alt="Slashimi"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Slashimi</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MoonPrincessTrinity.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8868','16');"
+                  alt="Moon Princess Trinity"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Moon Princess Trinity</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_WildBandolier.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8869','16');"
+                  alt="Wild Bandolier"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wild Bandolier</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_PandorasBoxOfEvil.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8837','16');"
+                  alt="Pandora's Box of Evil"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Pandora's Box of Evil</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ColtLightning.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8821','16');"
+                  alt="Colt Lightning"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Colt Lightning</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_LegacyOfInca.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8788','16');"
+                  alt="Legacy of Inca"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Legacy of Inca</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_LegionGold.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8789','16');"
+                  alt="Legion Gold"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Legion Gold</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_PilgrimOfDead.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8781','16');"
+                  alt="Pilgrim of Dead"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Pilgrim of Dead</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_GameOfGladiatorsUprising.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8782','16');"
+                  alt="Game of Gladiators: Uprising"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Game of Gladiators: Uprising</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ShamrockMiner.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8758','16');"
+                  alt="Shamrock Miner"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Shamrock Miner</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CashACabana.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8759','16');"
+                  alt="Cash-a-Cabana"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Cash-a-Cabana</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_InvadingVegas.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8760','16');"
+                  alt="Invading Vegas"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Invading Vegas</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_WildFalls2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8745','16');"
+                  alt="Wild Falls 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wild Falls 2</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_AthenaAscending.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8697','16');"
+                  alt="Athena Ascending"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Athena Ascending</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_NaughtyNicksBook.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8698','16');"
+                  alt="Naughty Nick's Book"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Naughty Nick's Book</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_USAFlip.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8682','16');"
+                  alt="USA Flip"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">USA Flip</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ClashOfCamelot.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8683','16');"
+                  alt="Clash of Camelot"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Clash of Camelot</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CanineCarnage.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8641','16');"
+                  alt="Canine Carnage"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Canine Carnage</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RiseOfOlympus100.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8642','16');"
+                  alt="Rise of Olympus 100"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Rise of Olympus 100</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_BoatBonanza.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8606','16');"
+                  alt="Boat Bonanza"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Boat Bonanza</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CountJokula.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8607','16');"
+                  alt="Count Jokula"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Count Jokula</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_FortuneRewind.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8552','16');"
+                  alt="Fortune Rewind"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Fortune Rewind</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_GatesOfTroy.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8538','16');"
+                  alt="Gates of Troy"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Gates of Troy</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ImmorTailsOfEgypt.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8539','16');"
+                  alt="ImmorTails of Egypt"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >ImmorTails of Egypt</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ChampionsOfMithrune.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8515','16');"
+                  alt="Champions of Mithrune"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Champions of Mithrune</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MountM.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8516','16');"
+                  alt="Mount M"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Mount M</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_BullInARodeo.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8493','16');"
+                  alt="Bull in a Rodeo"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Bull in a Rodeo</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_DoomOfEgypt.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8494','16');"
+                  alt="Doom of Egypt"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Doom of Egypt</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MegaDon.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8453','16');"
+                  alt="Mega Don"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Mega Don</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_LeprechaunsVault.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8454','16');"
+                  alt="Leprechaun's Vault"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Leprechaun's Vault</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ForgeOfFortunes.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8455','16');"
+                  alt="Forge of Fortunes"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Forge of Fortunes</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Rotiki.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8430','16');"
+                  alt="Rotiki"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Rotiki</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CashOfCommand.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8431','16');"
+                  alt="Cash of Command"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Cash of Command</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MerlinsGrimoire.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8400','16');"
+                  alt="Merlin's Grimoire"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Merlin's Grimoire</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RoccoGallo.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8382','16');"
+                  alt="Rocco Gallo"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Rocco Gallo</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CatWildeAndThePyramidsOfDead.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8371','16');"
+                  alt="Cat Wilde and the Pyramids of Dead"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Cat Wilde and the Pyramids of Dead</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_WildTrigger.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8361','16');"
+                  alt="Wild Trigger"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wild Trigger</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_DerbyWheel.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8362','16');"
+                  alt="Derby Wheel"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Derby Wheel</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_AnimalMadness.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8343','16');"
+                  alt="Animal Madness"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Animal Madness</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_KingsMask.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8344','16');"
+                  alt="King's Mask"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">King's Mask</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RiseOfGodsReckoning.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8298','16');"
+                  alt="Rise of Gods: Reckoning"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Rise of Gods: Reckoning</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_IdolOfFortune.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8299','16');"
+                  alt="Idol of Fortune"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Idol of Fortune</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ForgeOfGems.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8270','16');"
+                  alt="Forge of Gems"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Forge of Gems</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_PueblaParade.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8271','16');"
+                  alt="Puebla Parade"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Puebla Parade</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MoonPrincess100.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8251','16');"
+                  alt="Moon Princess 100"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Moon Princess 100</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RagingRex2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8231','16');"
+                  alt="Raging Rex 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Raging Rex 2</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_EyeOfAtum.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('8232','16');"
+                  alt="Eye of Atum"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Eye of Atum</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_SecretOfDead.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7995','16');"
+                  alt="Secret of Dead"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Secret of Dead</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_SafariOfWealth.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7996','16');"
+                  alt="Safari of Wealth"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Safari of Wealth</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_FatFrankies.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7997','16');"
+                  alt="Fat Frankies"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Fat Frankies</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Gigantoonz.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7893','16');"
+                  alt="Gigantoonz"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Gigantoonz</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CatWildeAndTheLostChapter.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7894','16');"
+                  alt="Cat Wilde and the Lost Chapter"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Cat Wilde and the Lost Chapter</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_TalesOfAsgardFreyasWedding.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7895','16');"
+                  alt="Tales of Asgard: Freya's Wedding"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Tales of Asgard: Freya's Wedding</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_15CrystalRosesATaleOfLove.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7877','16');"
+                  alt="15 Crystal Roses: A Tale of Love"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >15 Crystal Roses: A Tale of Love</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_LoveJoker.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7878','16');"
+                  alt="Love Joker"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Love Joker</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CaptainXenosEarthAdventure.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7844','16');"
+                  alt="Captain Xeno's Earth Adventure"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Captain Xeno's Earth Adventure</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_TaleOfKyubiko.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7845','16');"
+                  alt="Tale of Kyubiko"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Tale of Kyubiko</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_HooliganHustle.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7836','16');"
+                  alt="Hooligan Hustle"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Hooligan Hustle</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_BeastsOfFire.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7837','16');"
+                  alt="Beasts of Fire"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Beasts of Fire</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MoonPrincessChristmasKingdom.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7821','16');"
+                  alt="Moon Princess: Christmas Kingdom"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Moon Princess: Christmas Kingdom</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RichWildeAndTheWanderingCity.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7798','16');"
+                  alt="Rich Wilde and the Wandering City"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Rich Wilde and the Wandering City</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MerlinAndTheIceQueenMorgana.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7799','16');"
+                  alt="Merlin and the Ice Queen Morgana"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Merlin and the Ice Queen Morgana</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_TalesOfAsgardLokisFortune.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7752','16');"
+                  alt="Tales of Asgard: Loki's Fortune"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Tales of Asgard: Loki's Fortune</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_LegendOfTheIceDragon.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7753','16');"
+                  alt="Legend of the Ice Dragon"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Legend of the Ice Dragon</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_TheLastSundown.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7754','16');"
+                  alt="The Last Sundown"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >The Last Sundown</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_SparkyAndShortz.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7718','16');"
+                  alt="Sparky & Shortz"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Sparky & Shortz</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MuertoEnMictlan.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7719','16');"
+                  alt="Muerto en Mictlan"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Muerto en Mictlan</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CharlieChanceAndTheCurseOfCleopatra.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7698','16');"
+                  alt="Charlie Chance and The Curse of Cleopatra"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Charlie Chance and The Curse of Cleopatra</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_GhostOfDead.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7688','16');"
+                  alt="Ghost of Dead"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Ghost of Dead</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_TheWildClass.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7689','16');"
+                  alt="The Wild Class"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">The Wild Class</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_DrToonz.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7569','16');"
+                  alt="Dr. Toonz"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Dr. Toonz</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_SistersOfTheSun.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7573','16');"
+                  alt="Sisters of The Sun"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Sisters of The Sun</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_AgentOfHearts.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7515','16');"
+                  alt="Agent of Hearts"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Agent of Hearts</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_OdinProtectorOfRealms.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7084','16');"
+                  alt="Odin: Protector of Realms"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Odin: Protector of Realms</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_DiamondsOfTheRealm.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('7086','16');"
+                  alt="Diamonds of the Realm"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Diamonds of the Realm</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_HotelYetiWay.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6990','16');"
+                  alt="Hotel Yeti-Way"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Hotel Yeti-Way</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_BlazinBullfrog.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6972','16');"
+                  alt="Blazin' Bullfrog"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Blazin' Bullfrog</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Gemix2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6973','16');"
+                  alt="Gemix 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Gemix 2</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_FreeReelinJoker.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6932','16');"
+                  alt="Free Reelin' Joker"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Free Reelin' Joker</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_PackAndCash.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6933','16');"
+                  alt="Pack and Cash"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Pack and Cash</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CandyIslandPrincess.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6920','16');"
+                  alt="Candy Island Princess"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Candy Island Princess</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CharlieChance.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6921','16');"
+                  alt="Charlie Chance"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Charlie Chance</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ScrollOfDead.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6657','16');"
+                  alt="Scroll of Dead"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Scroll of Dead</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_PrismOfGems.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6658','16');"
+                  alt="Prism of Gems"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Prism of Gems</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CourtOfHearts.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6358','16');"
+                  alt="Court of Hearts"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Court of Hearts</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_3ClownMonty.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6360','16');"
+                  alt="3 Clown Monty"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">3 Clown Monty</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_FireJokerFreeze.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6357','16');"
+                  alt="Fire Joker Freeze"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Fire Joker Freeze</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RichWildeAndTheAmuletOfDead.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6344','16');"
+                  alt="Rich Wilde and The Amulet of Dead"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Rich Wilde and The Amulet of Dead</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_FireToad.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6345','16');"
+                  alt="Fire Toad"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Fire Toad</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ShimmeringWoods.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6317','16');"
+                  alt="Shimmering Woods"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Shimmering Woods</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_TheGreenKnight.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6314','16');"
+                  alt="The Green Knight"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >The Green Knight</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_HouseOfDoom2TheCrypt.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6315','16');"
+                  alt="House of Doom 2: The Crypt"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >House of Doom 2: The Crypt</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ThePayingPianoClub.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6290','16');"
+                  alt="The Paying Piano Club"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >The Paying Piano Club</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_TheFacesOfFreya.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6291','16');"
+                  alt="The Faces of Freya"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >The Faces of Freya</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CatWildeInTheEclipseOfTheSunGod.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6282','16');"
+                  alt="Cat Wilde in the Eclipse of the Sun God"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Cat Wilde in the Eclipse of the Sun God</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ThunderScreech.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6283','16');"
+                  alt="Thunder Screech"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Thunder Screech</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MinerDonkeyTrouble.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6248','16');"
+                  alt="Miner Donkey Trouble"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Miner Donkey Trouble</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_BullInAChinaShop.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6268','16');"
+                  alt="Bull in a China Shop"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Bull in a China Shop</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_LordMerlinAndTheLadyOfTheLake.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6269','16');"
+                  alt="Lord Merlin and the Lady of the Lake"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Lord Merlin and the Lady of the Lake</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CoilsOfCash.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6247','16');"
+                  alt="Coils of Cash"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Coils of Cash</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_GoldenOsiris.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6239','16');"
+                  alt="Golden Osiris"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Golden Osiris</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_PiggyBankFarm.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6240','16');"
+                  alt="Piggy Bank Farm"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Piggy Bank Farm</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_IceJoker.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6230','16');"
+                  alt="Ice Joker"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Ice Joker</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_FrozenGems.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6231','16');"
+                  alt="Frozen Gems"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Frozen Gems</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RiseOfAthena.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6165','16');"
+                  alt="Rise of Athena"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Rise of Athena</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_24KDragon.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6201','16');"
+                  alt="24K Dragon"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">24K Dragon</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_NewYearRiches.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6202','16');"
+                  alt="New Year Riches"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >New Year Riches</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_DiscoDiamonds.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6120','16');"
+                  alt="Disco Diamonds"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Disco Diamonds</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_HolidaySpirits.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6164','16');"
+                  alt="Holiday Spirits"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Holiday Spirits</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MadameInk.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6119','16');"
+                  alt="Madame Ink"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Madame Ink</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Reactoonz2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6084','16');"
+                  alt="Reactoonz 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Reactoonz 2</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RabbitHoleRiches.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('6085','16');"
+                  alt="Rabbit Hole Riches"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Rabbit Hole Riches</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_FelineFury.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5936','16');"
+                  alt="Feline Fury"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Feline Fury</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_GoldenTicket2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5929','16');"
+                  alt="Golden Ticket 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Golden Ticket 2</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_OctopusTreasure.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5930','16');"
+                  alt="Octopus Treasure"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Octopus Treasure</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_DiamondVortex.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5920','16');"
+                  alt="Diamond Vortex"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Diamond Vortex</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_JollyRoger2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5921','16');"
+                  alt="Jolly Roger 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Jolly Roger 2</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RiddleReelsACaseOfRiches.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5707','16');"
+                  alt="Riddle Reels: A Case of Riches"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Riddle Reels: A Case of Riches</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Blinged.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5708','16');"
+                  alt="Blinged"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Blinged</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_GoldVolcano.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5638','16');"
+                  alt="Gold Volcano"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Gold Volcano</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_WinABeest.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5639','16');"
+                  alt="Win-A-Beest"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Win-A-Beest</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Rally4Riches.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5534','16');"
+                  alt="Rally 4 Riches"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Rally 4 Riches</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_TrollHunters2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5603','16');"
+                  alt="Troll Hunters 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Troll Hunters 2</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CatWildeAndTheDoomOfDead.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5604','16');"
+                  alt="Cat Wilde and the Doom of Dead"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Cat Wilde and the Doom of Dead</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RichWildeAndTheShieldOfAthena.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5498','16');"
+                  alt="Rich Wilde and the Shield of Athena"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Rich Wilde and the Shield of Athena</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CharlieChanceInHellToPay.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5497','16');"
+                  alt="Charlie Chance in Hell to Pay"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Charlie Chance in Hell to Pay</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_AgentDestiny.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5482','16');"
+                  alt="Agent Destiny"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Agent Destiny</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CloudQuest.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5220','16');"
+                  alt="Cloud Quest"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Cloud Quest</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RingOfOdin.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5473','16');"
+                  alt="Ring of Odin"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Ring of Odin</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Annihilator.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5474','16');"
+                  alt="Annihilator"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Annihilator</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ThatsRich.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5452','16');"
+                  alt="That's Rich"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">That's Rich</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Testament.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5385','16');"
+                  alt="Testament"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Testament</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RichesOfRobin.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5386','16');"
+                  alt="Riches of Robin"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Riches of Robin</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_StickyJoker.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5387','16');"
+                  alt="Sticky Joker"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Sticky Joker</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_FortunesOfAliBaba.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5374','16');"
+                  alt="Fortunes of Ali Baba"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Fortunes of Ali Baba</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_LeprechaunGoesWild.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5368','16');"
+                  alt="Leprechaun Goes Wild"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Leprechaun Goes Wild</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_DawnOfEgypt.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5373','16');"
+                  alt="Dawn of Egypt"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Dawn of Egypt</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_WildBlood2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5366','16');"
+                  alt="Wild Blood 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wild Blood 2</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CoywolfCash.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5367','16');"
+                  alt="Coywolf Cash"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Coywolf Cash</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_5xMagic.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5207','16');"
+                  alt="5x Magic"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">5x Magic</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_7Sins.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5208','16');"
+                  alt="7 Sins"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">7 Sins</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_AceOfSpades.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5209','16');"
+                  alt="Ace of Spades"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Ace of Spades</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_AnkhOfAnubis.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5334','16');"
+                  alt="Ankh of Anubis"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Ankh of Anubis</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_AztecIdols.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5210','16');"
+                  alt="Aztec Idols"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Aztec Idols</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_AztecWarriorPrincess.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5211','16');"
+                  alt="Aztec Warrior Princess"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Aztec Warrior Princess</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_BakersTreat.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5212','16');"
+                  alt="Baker's Treat"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Baker's Treat</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_BananaRock.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5213','16');"
+                  alt="Banana Rock"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Banana Rock</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_BattleRoyal.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5214','16');"
+                  alt="Battle Royal"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Battle Royal</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_BigWin777.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5336','16');"
+                  alt="Big Win 777"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Big Win 777</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_BigWinCat.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5215','16');"
+                  alt="Big Win Cat"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Big Win Cat</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_BlackMamba.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5337','16');"
+                  alt="Black Mamba"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Black Mamba</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_BookOfDead.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5216','16');"
+                  alt="Book of Dead"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Book of Dead</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CashPump.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5342','16');"
+                  alt="Cash Pump"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Cash Pump</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CashVandal.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5217','16');"
+                  alt="Cash Vandal"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Cash Vandal</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CatsAndCash.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5218','16');"
+                  alt="Cats and Cash"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Cats and Cash</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ChineseNewYear.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5219','16');"
+                  alt="Chinese New Year"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Chinese New Year</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ChronosJoker.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5345','16');"
+                  alt="Chronos Joker"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Chronos Joker</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Contact.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5221','16');"
+                  alt="Contact"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Contact</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CopsnRobbers.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5222','16');"
+                  alt="Cops'n'Robbers"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Cops'n'Robbers</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CrazyCows.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5223','16');"
+                  alt="Crazy Cows"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Crazy Cows</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_CrystalSun.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5224','16');"
+                  alt="Crystal Sun"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Crystal Sun</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Demon.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5225','16');"
+                  alt="Demon"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Demon</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_DivineShowdown.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5346','16');"
+                  alt="Divine Showdown"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Divine Showdown</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_DragonMaiden.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5228','16');"
+                  alt="Dragon Maiden"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Dragon Maiden</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_DragonShip.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5229','16');"
+                  alt="Dragon Ship"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Dragon Ship</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_EasterEggs.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5230','16');"
+                  alt="Easter Eggs"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Easter Eggs</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_EnchantedCrystals.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5231','16');"
+                  alt="Enchanted Crystals"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Enchanted Crystals</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_EnchantedMeadow.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5232','16');"
+                  alt="Enchanted Meadow"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Enchanted Meadow</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Energoonz.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5233','16');"
+                  alt="Energoonz"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Energoonz</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_EyeOfTheKraken.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5236','16');"
+                  alt="Eye of the Kraken"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Eye of the Kraken</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_FireJoker.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5237','16');"
+                  alt="Fire Joker"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Fire Joker</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_FireflyFrenzy.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5238','16');"
+                  alt="Firefly Frenzy"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Firefly Frenzy</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_FortuneTeller.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5239','16');"
+                  alt="Fortune Teller"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Fortune Teller</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_FuErDai.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5240','16');"
+                  alt="FU ER DAI"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">FU ER DAI</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_GameOfGladiators.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5241','16');"
+                  alt="Game of Gladiators"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Game of Gladiators</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_GEMiX.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5242','16');"
+                  alt="GEMiX"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">GEMiX</span>
+            </div>
+
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_GoldKing.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5243','16');"
+                  alt="Gold King"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Gold King</span>
+            </div>
+
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_GoldTrophy2.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5244','16');"
+                  alt="Gold Trophy 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Gold Trophy 2</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_GoldenCaravan.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5245','16');"
+                  alt="Golden Caravan"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Golden Caravan</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_GoldenColts.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5246','16');"
+                  alt="Golden Colts"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Golden Colts</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_GoldenLegend.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5247','16');"
+                  alt="Golden Legend"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Golden Legend</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_GoldenTicket.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5248','16');"
+                  alt="Golden Ticket"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Golden Ticket</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_GrimMuerto.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5249','16');"
+                  alt="Grim Muerto"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Grim Muerto</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_HappyHalloween.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5250','16');"
+                  alt="Happy Halloween"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Happy Halloween</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_HoneyRush.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5352','16');"
+                  alt="Honey Rush"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Honey Rush</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_HouseOfDoom.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5252','16');"
+                  alt="House of Doom"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">House of Doom</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ImperialOpera.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5254','16');"
+                  alt="Imperial Opera"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Imperial Opera</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_InfernoJoker.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5253','16');"
+                  alt="Inferno Joker"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Inferno Joker</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_InfernoStar.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5255','16');"
+                  alt="Inferno Star"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Inferno Star</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_IrishGold.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5256','16');"
+                  alt="Irish Gold"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Irish Gold</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_IronGirl.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5257','16');"
+                  alt="Iron Girl"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Iron Girl</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_JadeMagician.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5259','16');"
+                  alt="Jade Magician"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Jade Magician</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_JewelBox.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5260','16');"
+                  alt="Jewel Box"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Jewel Box</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_JollyRoger.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5262','16');"
+                  alt="Jolly Roger"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Jolly Roger</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_LadyOfFortune.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5264','16');"
+                  alt="Lady of Fortune"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Lady of Fortune</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_LegacyOfDead.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5358','16');"
+                  alt="Legacy of Dead"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Legacy of Dead</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_LegacyOfEgypt.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5265','16');"
+                  alt="Legacy of Egypt"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Legacy of Egypt</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_LeprechaunGoesEgypt.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5266','16');"
+                  alt="Leprechaun goes Egypt"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Leprechaun goes Egypt</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_LuckyDiamonds.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5267','16');"
+                  alt="Lucky Diamonds"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Lucky Diamonds</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Mahjong88.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5268','16');"
+                  alt="Mahjong88"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Mahjong88</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Matsuri.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5269','16');"
+                  alt="Matsuri"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Matsuri</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MermaidsDiamond.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5270','16');"
+                  alt="Mermaids Diamond"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Mermaids Diamond</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MerryXmas.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5271','16');"
+                  alt="Merry Xmas"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Merry Xmas</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MissionCash.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5273','16');"
+                  alt="Mission Cash"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Mission Cash</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MoonPrincess.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5275','16');"
+                  alt="Moon Princess"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Moon Princess</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MultiFruit81.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5276','16');"
+                  alt="MultiFruit 81"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">MultiFruit 81</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MysteryJoker.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5277','16');"
+                  alt="Mystery Joker"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Mystery Joker</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_MysteryJoker6000.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5278','16');"
+                  alt="Mystery Joker 6000"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Mystery Joker 6000</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Myth.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5279','16');"
+                  alt="Myth"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Myth</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_NinjaFruits.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5280','16');"
+                  alt="Ninja Fruits"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Ninja Fruits</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_PearlLagoon.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5281','16');"
+                  alt="Pearl Lagoon"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Pearl Lagoon</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_PearlsOfIndia.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5282','16');"
+                  alt="Pearls of India"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Pearls of India</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_PerfectGems.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5283','16');"
+                  alt="Perfect Gems"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Perfect Gems</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_PhoenixReborn.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5284','16');"
+                  alt="Phoenix Reborn"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Phoenix Reborn</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Pimped.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5286','16');"
+                  alt="Pimped"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Pimped</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_PlanetFortune.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5287','16');"
+                  alt="Planet Fortune"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Planet Fortune</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_PrissyPrincess.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5288','16');"
+                  alt="Prissy Princess"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Prissy Princess</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_ProsperityPalace.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5289','16');"
+                  alt="Prosperity Palace"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Prosperity Palace</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_QueensDayTilt.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5290','16');"
+                  alt="Queen's Day Tilt"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Queen's Day Tilt</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RageToRiches.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5292','16');"
+                  alt="Rage to Riches"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Rage to Riches</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RagingRex.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5293','16');"
+                  alt="Raging Rex"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Raging Rex</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RainforestMagic.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5291','16');"
+                  alt="Rainforest Magic"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Rainforest Magic</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Reactoonz.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5294','16');"
+                  alt="Reactoonz"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Reactoonz</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RichesOfRA.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5295','16');"
+                  alt="Riches of RA"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Riches of RA</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RiseOfDead.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5296','16');"
+                  alt="Rise of Dead"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Rise of Dead</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RiseOfMerlin.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5297','16');"
+                  alt="Rise of Merlin"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Rise of Merlin</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RiseOfOlympus.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5298','16');"
+                  alt="Rise of Olympus"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Rise of Olympus</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_RoyalMasquerade.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5299','16');"
+                  alt="Royal Masquerade"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Royal Masquerade</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Sabaton.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5300','16');"
+                  alt="Sabaton"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Sabaton</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_SailsOfGold.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5301','16');"
+                  alt="Sails of Gold"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Sails of Gold</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_SambaCarnival.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5302','16');"
+                  alt="Samba Carnival"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Samba Carnival</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_SeaHunter.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5303','16');"
+                  alt="Sea Hunter"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Sea Hunter</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_SizzlingSpins.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5305','16');"
+                  alt="Sizzling Spins"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Sizzling Spins</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_SpaceRace.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5306','16');"
+                  alt="Space Race"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Space Race</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_SpinParty.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5307','16');"
+                  alt="Spin Party"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Spin Party</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_StarJoker.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5308','16');"
+                  alt="Star Joker"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Star Joker</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_StreetMagic.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5309','16');"
+                  alt="Street Magic"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Street Magic</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_SuperFlip.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5310','16');"
+                  alt="Super Flip"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Super Flip</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_Sweet27.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5312','16');"
+                  alt="Sweet 27"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Sweet 27</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_SweetAlchemy.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5313','16');"
+                  alt="Sweet Alchemy"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Sweet Alchemy</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_TheSwordAndTheGrail.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5314','16');"
+                  alt="The Sword and The Grail"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >The Sword and The Grail</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_TomeOfMadness.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5315','16');"
+                  alt="Tome of Madness"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Tome of Madness</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_TowerQuest.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5178','16');"
+                  alt="Tower Quest"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Tower Quest</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_VikingRunecraft.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5317','16');"
+                  alt="Viking Runecraft"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Viking Runecraft</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_WildBlood.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5318','16');"
+                  alt="Wild Blood"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wild Blood</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_WildFalls.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5319','16');"
+                  alt="Wild Falls"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wild Falls</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_WildFrames.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5356','16');"
+                  alt="Wild Frames"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wild Frames</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_WildMelon.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5320','16');"
+                  alt="Wild Melon"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wild Melon</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_WildNorth.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5321','16');"
+                  alt="Wild North"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wild North</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_WildRails.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5322','16');"
+                  alt="Wild Rails"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wild Rails</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_WildhoundDerby.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5359','16');"
+                  alt="Wildhound Derby"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Wildhound Derby</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_WizardOfGems.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5323','16');"
+                  alt="Wizard of Gems"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wizard of Gems</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_XmasJoker.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5324','16');"
+                  alt="Xmas Joker"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Xmas Joker</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/playngo/PNG_XmasMagic.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5357','16');"
+                  alt="Xmas Magic"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Xmas Magic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--FOOTER -->
+    <footer>
+      <div class="footer-logos">
+        <img src="images/footer-logos.png" alt="Partners" />
+      </div>
+      <div class="footer-nav">
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>ABOUT</h4>
+            <ul>
+              <li><a href="#">보너스</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">메세지 보내기</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>SERVICES</h4>
+            <ul>
+              <li><a href="#">입금</a></li>
+              <li><a href="#">출금</a></li>
+              <li><a href="#">머니이동</a></li>
+              <li><a href="#">프로모션 신청</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>BANKS</h4>
+            <ul>
+              <li>Neteller</li>
+              <li>Moneybookers</li>
+              <li>MasterCard</li>
+              <li>Bitcoin</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END OF FOOTER -->
+    <script src="js/login-register.js"></script>
+    <script src="js/realtime.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/homescripts.js"></script>
+  </body>
+</html>

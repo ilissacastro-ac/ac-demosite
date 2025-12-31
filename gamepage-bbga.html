@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ASIANCONNECT</title>
+    <link rel="icon" href="images/weblogo.png" type="image/png" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/gamepage.css" />
+  </head>
+
+  <body>
+    <!-- Header Navbar -->
+    <div class="header">
+      <div class="header-inner">
+        <img class="contact" src="Images/contact.png" alt="contact" />
+        <div class="realtime">
+          <span id="date_time"></span>
+          <img src="Images/korea.png" class="korea-active" alt="korea" />
+        </div>
+      </div>
+    </div>
+    <!-- Primary Navbar -->
+    <div class="top-nav">
+      <div class="top-nav-inner">
+        <!-- LEFT -->
+        <div class="nav-left">
+          <div class="nav-logo">
+            <img
+              src="Images/headerlogo.png"
+              alt="Logo"
+              onclick="location.href='index.html'"
+            />
+          </div>
+          <nav class="nav-menu">
+            <a
+              href="deposit.html"
+              class="<?= ($page === 'deposit') ? 'active' : '' ?>"
+              >입금</a
+            >
+            <a
+              href="withdraw.html"
+              class="<?= ($page === 'withdraw') ? 'active' : '' ?>"
+              >출금</a
+            >
+            <a
+              href="transfer.html"
+              class="<?= ($page === 'transfer') ? 'active' : '' ?>"
+              >머니이동</a
+            >
+            <a
+              href="sports.html"
+              class="<?= ($page === 'sports') ? 'active' : '' ?>"
+              >스포츠</a
+            >
+            <a
+              href="casino.html"
+              class="<?= ($page === 'casino') ? 'active' : '' ?>"
+              >카지노</a
+            >
+            <a
+              href="slots.html"
+              class="<?= ($page === 'slots') ? 'active' : '' ?>"
+              >슬롯</a
+            >
+            <a
+              href="bonus.html"
+              class="<?= ($page === 'bonus') ? 'active' : '' ?>"
+              >보너스</a
+            >
+            <a
+              href="customer-service.html"
+              class="<?= ($page === 'customer-service') ? 'active' : '' ?>"
+              >고객센터</a
+            >
+            <a
+              href="streaming.html"
+              class="<?= ($page === 'streaming') ? 'active' : '' ?>"
+              >스트리밍</a
+            >
+          </nav>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="nav-right">
+          <div class="profile">
+            <img src="Images/profile.png" alt="Profile" />
+          </div>
+
+          <div class="auth-box">
+            <a href="#" class="login-link" id="openLogin">로그인 / 회원가입</a>
+            <a href="#" class="buddy-link">Buddy 보너스</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Primary Navbar -->
+
+    <!-- Game Page -->
+    <div class="gamepage-title-wrap">
+      <img src="images/game-title-bbga.png" alt="Game Menu Title" />
+    </div>
+
+    <!-- TAB CONTENT -->
+    <div class="fancy-box">
+      <div class="column-sltmpage">
+        <div class="sltm-games">
+          <div class="row-sltm">
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5030.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5030','4');"
+                  alt="Chinese Mammon"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Chinese Mammon</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5058.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5058','4');"
+                  alt="Crazy Fruit"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Crazy Fruit</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5067.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5067','4');"
+                  alt="A Chinese Odyssey"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >A Chinese Odyssey</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5094.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5094','4');"
+                  alt="Jin Ping Mai 2"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Jin Ping Mai 2</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5096.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5096','4');"
+                  alt="Wu Xing"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Wu Xing</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5098.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5098','4');"
+                  alt="WUFU LINMEN"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">WUFU LINMEN</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5128.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5128','4');"
+                  alt="Good Fortune"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Good Fortune</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5153.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5153','4');"
+                  alt="Jiu Wei Hu"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Jiu Wei Hu</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5166.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5166','4');"
+                  alt="Fire Of Huluwa"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Fire Of Huluwa</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5184.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5184','4');"
+                  alt="Carp Turn Dragon"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Carp Turn Dragon</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5191.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5191','4');"
+                  alt="Piggy Bank"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Piggy Bank</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5198.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5198','4');"
+                  alt="The Legend of Halong Bay"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >The Legend of Halong Bay</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5200.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5200','4');"
+                  alt="Hoo Hey How"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Hoo Hey How</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5209.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5209','4');"
+                  alt="SAFARI"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">SAFARI</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5215.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5215','4');"
+                  alt="BEIJING OPERA"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">BEIJING OPERA</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5219.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5219','4');"
+                  alt="Diamond Fortune"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Diamond Fortune</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5220.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5220','4');"
+                  alt="Spider Spirits"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Spider Spirits</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5225.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5225','4');"
+                  alt="Chibi"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Chibi</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5234.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5234','4');"
+                  alt="Awesome Buffalo"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Awesome Buffalo</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5243.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5243','4');"
+                  alt="Too Rich"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Too Rich</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5250.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5250','4');"
+                  alt="Minecart"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Minecart</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5251.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5251','4');"
+                  alt="Clearance"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Clearance</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5252.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5252','4');"
+                  alt="Leprechaun"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Leprechaun</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5253.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5253','4');"
+                  alt="Parvenu"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Parvenu</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5256.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5256','4');"
+                  alt="Firecrackers"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Firecrackers</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5257.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5257','4');"
+                  alt="IP MAN"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">IP MAN</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5259.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5259','4');"
+                  alt="Gold King Kong"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Gold King Kong</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5261.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5261','4');"
+                  alt="Fortune Cat"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Fortune Cat</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5264.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5264','4');"
+                  alt="Dragon 888"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Dragon 888</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5267.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5267','4');"
+                  alt="Beauty Party"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Beauty Party</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5269.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5269','4');"
+                  alt="Big Wings"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Big Wings</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5272.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5272','4');"
+                  alt="Lucky Dog"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Lucky Dog</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5273.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5273','4');"
+                  alt="Hello Tiki"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Hello Tiki</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5274.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5274','4');"
+                  alt="Zeus Rise"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Zeus Rise</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5275.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5275','4');"
+                  alt="Mahjong Ways"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Mahjong Ways</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5277.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5277','4');"
+                  alt="LuckyAce"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">LuckyAce</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5311.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5311','4');"
+                  alt="Flipped Temple"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Flipped Temple</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5601.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5601','4');"
+                  alt="Adventure of Mystical Land"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Adventure of Mystical Land</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5823.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5823','4');"
+                  alt="Big Prosperity"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage">Big Prosperity</span>
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5835.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5835','4');"
+                  alt="Happy Golden Ox Of Happiness"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Happy Golden Ox Of Happiness</span
+              >
+            </div>
+            <div class="column-sltm">
+              <div class="zoom-hover">
+                <img
+                  src="images/slots/bbin/5837.png"
+                  class="slotgames-img"
+                  onclick="slotGameStartNew('5837','4');"
+                  alt="Happy Golden Monkey Of Happiness"
+                />
+              </div>
+              <span id="gname" class="game-title-slotpage"
+                >Happy Golden Monkey Of Happiness</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--FOOTER -->
+    <footer>
+      <div class="footer-logos">
+        <img src="images/footer-logos.png" alt="Partners" />
+      </div>
+      <div class="footer-nav">
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>ABOUT</h4>
+            <ul>
+              <li><a href="#">보너스</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">메세지 보내기</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>SERVICES</h4>
+            <ul>
+              <li><a href="#">입금</a></li>
+              <li><a href="#">출금</a></li>
+              <li><a href="#">머니이동</a></li>
+              <li><a href="#">프로모션 신청</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>BANKS</h4>
+            <ul>
+              <li>Neteller</li>
+              <li>Moneybookers</li>
+              <li>MasterCard</li>
+              <li>Bitcoin</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END OF FOOTER -->
+
+    <script src="js/realtime.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/homescripts.js"></script>
+  </body>
+</html>
